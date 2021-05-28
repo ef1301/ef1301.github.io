@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.js": "/static/js/main.8b37efd1.chunk.js",
-    "main.js.map": "/static/js/main.8b37efd1.chunk.js.map",
+    "main.css": "/static/css/main.4fb02da6.chunk.css",
+    "main.js": "/static/js/main.b22144d4.chunk.js",
+    "main.js.map": "/static/js/main.b22144d4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ae2006ec.js",
     "runtime-main.js.map": "/static/js/runtime-main.ae2006ec.js.map",
-    "static/js/2.37e5c951.chunk.js": "/static/js/2.37e5c951.chunk.js",
-    "static/js/2.37e5c951.chunk.js.map": "/static/js/2.37e5c951.chunk.js.map",
+    "static/js/2.d2f27abf.chunk.js": "/static/js/2.d2f27abf.chunk.js",
+    "static/js/2.d2f27abf.chunk.js.map": "/static/js/2.d2f27abf.chunk.js.map",
     "index.html": "/index.html",
-    "static/js/2.37e5c951.chunk.js.LICENSE.txt": "/static/js/2.37e5c951.chunk.js.LICENSE.txt",
-    "static/media/BungeeOutline-Regular.884830e4.ttf": "/static/media/BungeeOutline-Regular.884830e4.ttf",
-    "static/media/Playball-Regular.397120f5.ttf": "/static/media/Playball-Regular.397120f5.ttf",
-    "static/media/Rajdhani-Regular.955ad2c7.ttf": "/static/media/Rajdhani-Regular.955ad2c7.ttf"
+    "static/css/main.4fb02da6.chunk.css.map": "/static/css/main.4fb02da6.chunk.css.map",
+    "static/js/2.d2f27abf.chunk.js.LICENSE.txt": "/static/js/2.d2f27abf.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/static/media/Rajdhani-Regular.955ad2c7.ttf"
   },
   "entrypoints": [
     "static/js/runtime-main.ae2006ec.js",
-    "static/js/2.37e5c951.chunk.js",
-    "static/js/main.8b37efd1.chunk.js"
+    "static/js/2.d2f27abf.chunk.js",
+    "static/css/main.4fb02da6.chunk.css",
+    "static/js/main.b22144d4.chunk.js"
   ]
 }

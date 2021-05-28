@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import './styles/functional.css';
 //Components
 import About from './components/containers/About.js';
 //import Projects from './components/containers/Projects.js';
