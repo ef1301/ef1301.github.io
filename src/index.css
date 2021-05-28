@@ -1,13 +1,50 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: "Bungee_Outline";
+  src: local("Bungee_Outline"),
+    url('./fonts/Bungee_Outline/BungeeOutline-Regular.ttf') format("truetype");
+  font-weight: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: "Playball";
+  src: local("Playball"),
+    url('./fonts/Playball/Playball-Regular.ttf') format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Rajdhani";
+  src: local("Rajdhani"),
+    url('./fonts/Rajdhani/Rajdhani-Regular.ttf') format("truetype");
+  font-weight: normal;
+}
+
+:root {
+    --mainColor: #ff9800;
+    --bg-color: #fff;
+    --text-color: #000;
+}
+
+[data-theme="dark"] {
+  --bg-color: #3F3F3F;
+  --text-color: #fff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.App {
+    display: flex;
+    flex-flow: row wrap;
+    font-family: Rajdhani;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-size: 1.25em;
+}
+
+a:active, a:visited {
+    text-decoration: none;
+    color: var(--text-color);
 }
