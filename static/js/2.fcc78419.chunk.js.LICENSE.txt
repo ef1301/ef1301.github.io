@@ -4,6 +4,12 @@ object-assign
 @license MIT
 */
 
+/*!
+  @mojs/core – The motion graphics toolbelt for the web
+  Oleg Solomka @legomushroom 2021 MIT
+  1.0.3
+*/
+
 /** @license React v0.20.2
  * scheduler.production.min.js
  *
