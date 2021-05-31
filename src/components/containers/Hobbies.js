@@ -12,7 +12,11 @@ const Hobbies = () => {
                 <li>Ukulele</li>
               </ul>
             </li>
-            <li>Listening to Music</li>
+            <li>Listening to Music
+              <ul>
+                <li>Spotify Link</li>
+              </ul>
+            </li>
             <li>Playing Games with Friends
               <ul>
                 <li>To the Moon</li>

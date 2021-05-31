@@ -3,11 +3,9 @@ import React from 'react';
 const Navbar = ({refs, scroll}) => {
   return (
     <nav>
-      <ul>
+      <ul id="nav-links">
         <li onClick={scroll.scrollToAbout}>About</li>
         <li onClick={scroll.scrollToHobbies}>Hobbies</li>
-        {/*<li onClick={scrollSmoothHandler(refs.projectsRef)}>Projects</li>
-            <li onClick={scrollSmoothHandler(refs.hobbiesRef)}>Hobbies</li>*/}
       </ul>
     </nav>
   );

@@ -1,5 +1,11 @@
 header {
     width: 100%;
+    padding: 2% 3%;
+}
+
+header h1, #side-menu {
+    display: inline-block;
+    width: 50%;
 }
 
 header ul {
@@ -8,22 +14,27 @@ header ul {
     padding: 0;
     display: flex;
     flex-flow: row wrap;
+    justify-content: flex-end;
 }
 
-header ul li {
-    margin: 0 2%;
+header li, #dark-mode {
+    margin: 0 3%;
 }
 
 nav {
-    width: 30%;
+    width: 15%;
     font-family: Playball;
     font-size: 2em;
+    border-right: solid black .1em;
 }
 
-nav ul {
+#nav-links {
     list-style-type: none;
+    margin: auto;
 }
 
 #page-body {
-    width: 60%;
+    margin: auto;
+    width: 80%;
+    padding: 2%;
 }
