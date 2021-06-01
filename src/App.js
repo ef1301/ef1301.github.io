@@ -1,6 +1,11 @@
 import React, {useState, useRef} from 'react';
+
 import './styles/functional.css';
 import './styles/responsive.css';
+import './styles/utils.css';
+
+//import { shootLines } from './styles/basic-utils.js';
+
 //Components
 import About from './components/containers/About.js';
 //import Projects from './components/containers/Projects.js';

@@ -30,6 +30,10 @@
   --text-color: #fff;
 }
 
+html {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
