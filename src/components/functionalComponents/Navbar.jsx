@@ -6,7 +6,7 @@ const Navbar = ({refs, scroll}) => {
       <div id="nav-collapsed"></div>
       <ul id="nav-links">
         <li onClick={scroll.scrollToAbout}>
-          <a href="#0" >About</a>
+          <a href="#0" >About Me</a>
         </li>
 
         <li>

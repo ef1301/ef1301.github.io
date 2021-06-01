@@ -20,7 +20,6 @@
 }
 
 :root {
-    --mainColor: #ff9800;
     --bg-color: #fff;
     --text-color: #000;
 }
@@ -28,7 +27,7 @@
 [data-theme="dark"] {
   --mid-color: #616e7c;
   --bg-color: #1f2933;
-  --link-color: #;
+  --link-color: #e4e7eb;
   --text-color: #e4e7eb;
   --sec-color: #3e4c59;
 }

@@ -1,3 +1,11 @@
+[data-theme="dark"] {
+    --mid-color: #616e7c;
+    --bg-color: #1f2933;
+    --link-color: #e4e7eb;
+    --text-color: #e4e7eb;
+    --sec-color: #3e4c59;
+}
+
 header {
     padding: 1% 3%;
     width: 100%;
@@ -45,7 +53,7 @@ nav {
     font-family: Playball;
     font-size: 1.5em;
     position: fixed;
-    background-color: #e4e7eb;
+    background-color: var(--mid-color);
 }
 
 #nav-collapsed {
@@ -57,7 +65,7 @@ nav {
 
 #nav-links {
     list-style-type: none;
-    margin: auto;
+    margin: 15% auto;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
@@ -65,7 +73,7 @@ nav {
 
 #nav-links li {
     text-align: center;
-    margin: 15% 0;
+    margin: 10% 0;
 }
 
 #nav-links a {

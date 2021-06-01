@@ -13,8 +13,8 @@ const Header = ({toggleDarkMode, darkMode}) => {
             {darkMode ? "Light Mode?" : "Dark Mode?"}
             <br/>
             <label className="switch">
-              <input type="checkbox" onClick={toggleDarkMode}/>
-              <span className="slider"></span>
+              <input type="checkbox" />
+              <span className="slider" onClick={toggleDarkMode}></span>
             </label>
           </div>
         </ul>
