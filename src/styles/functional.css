@@ -24,24 +24,35 @@ header ul {
     justify-content: flex-end;
 }
 
+header a {
+    color: black;
+    text-decoration: none;
+}
+
+header a:hover {
+    color: black;
+    text-decoration: none;
+}
+
 header li, #dark-mode {
     margin: 0 1%;
 }
 
 nav {
-    margin-top: 10%;
+    margin-top: 12%;
     width: 15%;
     height: 50%;
     font-family: Playball;
     font-size: 1.5em;
     position: fixed;
+    background-color: #e4e7eb;
 }
 
 #nav-collapsed {
     width: 2%;
     height: 50%;
     position: fixed;
-    background-color: lightgray;
+    background-color: #9aa5b1;
 }
 
 #nav-links {

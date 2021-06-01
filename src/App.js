@@ -31,14 +31,14 @@ function App() {
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
       <Navbar refs={{aboutRef,hobbiesRef}} scroll={{scrollToAbout, scrollToHobbies}} />
-      <div id="page-body">
+      <section id="page-body">
         <div ref={aboutRef}>
           <About ref={aboutRef}/>
         </div>
         <div ref={hobbiesRef}>
           <Hobbies ref={hobbiesRef}/>
         </div>
-      </div>
+      </section>
       <Footer/>
     </div>
   );

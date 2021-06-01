@@ -26,8 +26,11 @@
 }
 
 [data-theme="dark"] {
-  --bg-color: #3F3F3F;
-  --text-color: #fff;
+  --mid-color: #616e7c;
+  --bg-color: #1f2933;
+  --link-color: #;
+  --text-color: #e4e7eb;
+  --sec-color: #3e4c59;
 }
 
 html {
@@ -48,7 +51,15 @@ body {
     font-size: 1.25em;
 }
 
-a:active, a:visited {
+section {
+  background-color: var(--sec-color);
+}
+
+a, a:active, a:visited {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--link-color);
+}
+
+nav {
+  background-color: var(--mid-color);
 }
