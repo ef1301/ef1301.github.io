@@ -5,12 +5,6 @@
     margin: 5% auto;
 }
 
-#dark-mode {
-    padding: 2% 15%;
-    margin: 5% auto;
-    text-align: center;
-}
-
 .toggle {
     --size: 2rem;
     --ray-size: calc(var(--size) * -0.4);
@@ -48,7 +42,7 @@
     box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
 }
 
-/*.switch {
+.switch {
     position: relative;
     display: inline-block;
     width: 60px;
@@ -98,4 +92,3 @@ input:checked + .slider:before {
     -ms-transform: translateX(26px);
     transform: translateX(26px);
 }
-*/

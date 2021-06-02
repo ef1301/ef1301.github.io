@@ -21,7 +21,7 @@ export function shootLines(e) {
     top: itemDim.top + (itemSize.y/2),
     radiusX: itemSize.x,
     radiusY: itemSize.y,
-    count: 10,
+    count: 6,
 
     children: {
       shape: shapes[chosenS],

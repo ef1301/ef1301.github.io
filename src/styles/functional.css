@@ -69,26 +69,40 @@ nav {
     margin: 1% 0;
     background-color: #ccc;
     transition: background-color 250ms, opacity 400ms;
+    box-shadow: #1f2933 1px 2px;
 }
 
 #nav-links a {
     padding-left: 1em;
     margin: auto;
     color: black;
-    font-family: Playball;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-decoration: none;
 }
 
 #nav-links li:hover {
-    background-color: olive;
+    background-color: #616e7c;
 
+}
+
+#page-utils {
+    padding-bottom: 4%;
+    font-size: .75em;
+}
+
+#page-utils h1 {
+    font-size: 1.5em;
+    font-family: Playball;
+}
+
+#utils {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 #page-body {
     width: 100%;
     padding: 1%;
     margin: auto 0 auto 20%;
-    border-top: solid black .1em;
-    border-left: solid black .1em;
 }

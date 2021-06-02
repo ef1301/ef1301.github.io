@@ -35,7 +35,7 @@ function App() {
         scroll={{scrollToAbout, scrollToHobbies}}
         darkMode={darkMode} 
         toggleDarkMode={toggleDarkMode} />
-      <section id="page-body">
+      <div id="page-body">
         {/*<div ref={aboutRef}>
           <About ref={aboutRef}/>
         </div>
@@ -43,7 +43,7 @@ function App() {
           <Hobbies ref={hobbiesRef}/>
   </div>*/}
       <Window/>
-      </section>
+      </div>
       <Footer/>
     </div>
   );
