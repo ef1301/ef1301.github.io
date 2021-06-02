@@ -34,6 +34,10 @@
 
 html {
     box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    background-color: var(--bg-color);
 }
 
 body {
@@ -41,7 +45,13 @@ body {
     padding: 0;
 }
 
+#root {
+  height: 100vh;
+  width: 100vw;
+}
+
 .App {
+  height: 100%;
     display: flex;
     flex-flow: row wrap;
     font-family: Rajdhani;
@@ -54,7 +64,7 @@ section {
   background-color: var(--sec-color);
 }
 
-a, a:active, a:visited {
+ header a, a:active, a:visited {
     text-decoration: none;
     color: var(--link-color);
 }

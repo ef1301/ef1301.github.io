@@ -8,13 +8,13 @@ import './styles/utils.css';
 
 //Components
 import About from './components/containers/About.js';
-//import Projects from './components/containers/Projects.js';
 import Hobbies from './components/containers/Hobbies.js';
 import {
   Header,
   Navbar,
   Footer
 } from "./components/functionalComponents";
+import Window from './components/utils/window';
 
 const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -29,15 +29,20 @@ function App() {
 
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>
-      <Navbar refs={{aboutRef,hobbiesRef}} scroll={{scrollToAbout, scrollToHobbies}} />
+      <Header />
+      <Navbar 
+        refs={{aboutRef,hobbiesRef}} 
+        scroll={{scrollToAbout, scrollToHobbies}}
+        darkMode={darkMode} 
+        toggleDarkMode={toggleDarkMode} />
       <section id="page-body">
-        <div ref={aboutRef}>
+        {/*<div ref={aboutRef}>
           <About ref={aboutRef}/>
         </div>
         <div ref={hobbiesRef}>
           <Hobbies ref={hobbiesRef}/>
-        </div>
+  </div>*/}
+      <Window/>
       </section>
       <Footer/>
     </div>

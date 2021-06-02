@@ -1,7 +1,7 @@
 import React from 'react';
 import PDF from '../assets/Resume.pdf';
 
-const Header = ({toggleDarkMode, darkMode}) => {
+const Header = ({}) => {
   return (
     <header>
       <h1>Emily Fang</h1>
@@ -9,14 +9,6 @@ const Header = ({toggleDarkMode, darkMode}) => {
         <ul>
           <li><a href={PDF} target="_blank" rel="noreferrer" >Resume</a></li>
           <li><a href="https://github.com/ef1301/ef1301.github.io">Source Code</a></li>
-          <div id="dark-mode">
-            {darkMode ? "Light Mode?" : "Dark Mode?"}
-            <br/>
-            <label className="switch">
-              <input type="checkbox" />
-              <span className="slider" onClick={toggleDarkMode}></span>
-            </label>
-          </div>
         </ul>
       </div>
     </header>

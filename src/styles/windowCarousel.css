@@ -1,0 +1,63 @@
+#window{
+	border-radius:6px;
+	background:#234871;
+	width: 100%;
+	height: 75%;	
+	overflow: hidden;
+	position:relative;
+}
+
+#header{
+	background:#82b4eb;
+	height:33px;
+	padding-left:18px;
+}
+#header .circle{
+	background:#689cd4;
+	border-radius:50%;
+	float:left;
+	width:12px;
+	height:12px;
+	margin-right:6px;
+	margin-top:11px;
+}
+
+.carousel{
+  width: 100%;
+  height: 516px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.carousel::-webkit-scrollbar {
+	display: none;
+}
+
+.slide {
+	color: white;
+	width: 100%;
+    height: 516px;
+	padding: 2%;
+}
+
+
+#espose{
+	position:absolute;
+	bottom:20px;
+	right:20px;
+	width:26px;
+	height:26px;	
+	cursor:pointer;
+	z-index:500;
+  display:none;
+}
+
+#espose p{
+  border: 2px solid #8fb6e3;
+	width: 6px;
+	height: 6px;
+	margin: 0 3px 3px 0;
+	float:left;
+}

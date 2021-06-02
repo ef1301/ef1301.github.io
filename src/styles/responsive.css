@@ -1,6 +1,12 @@
 @media screen and (max-width: 1200px) {
     nav {
         width: 25%;
+        top:0;
+    }
+    nav li {
+        width: 100%;
+        padding: 0;
+        margin: 0;
     }
     #page-body {
         width: 70%;
