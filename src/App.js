@@ -1,4 +1,5 @@
 import React, {useState, useRef} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import './styles/functional.css';
 import './styles/responsive.css';
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
+      <Router basename={process.env.PUBLIC_URL}>
       <Header />
       <Navbar 
         refs={{aboutRef,hobbiesRef}} 
@@ -36,15 +38,20 @@ function App() {
         darkMode={darkMode} 
         toggleDarkMode={toggleDarkMode} />
       <div id="page-body">
+        <Switch>
+          <Route exact path="/" render={() =><Window/>}/>
+          <Route exact path="/about" component={About}/>
+          <Route exact path="/hobbies" component={Hobbies}/>
+        </Switch>
         {/*<div ref={aboutRef}>
           <About ref={aboutRef}/>
         </div>
         <div ref={hobbiesRef}>
           <Hobbies ref={hobbiesRef}/>
   </div>*/}
-      <Window/>
       </div>
       <Footer/>
+      </Router>
     </div>
   );
 }

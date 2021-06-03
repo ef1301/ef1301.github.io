@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import pfp from '../assets/pfp.jpg';
 
 const Navbar = ({refs, scroll, toggleDarkMode, darkMode}) => {
@@ -9,19 +10,19 @@ const Navbar = ({refs, scroll, toggleDarkMode, darkMode}) => {
       <img id="pfp" src={pfp}></img>
       <ul id="nav-links">
         <li>
-          <a href="#0" >{japtrans ? "私について" : "About Me"}</a>
+          <Link to="/about" >{japtrans ? "私について" : "About Me"}</Link>
         </li>
 
         <li>
-          <a href="#0">{japtrans ? "プロジェクト" : "Projects"}</a>
+          <Link href="#0">{japtrans ? "プロジェクト" : "Projects"}</Link>
         </li>
 
         <li>
-          <a href="#0">{japtrans ? "趣味" : "Hobbies"}</a>
+          <Link href="#0">{japtrans ? "趣味" : "Hobbies"}</Link>
         </li>
 
         <li>
-          <a href="#0">{japtrans ? "私について" : "Contact"}</a>
+          <Link href="#0">{japtrans ? "連絡する" : "Contact"}</Link>
         </li>
       </ul>
 

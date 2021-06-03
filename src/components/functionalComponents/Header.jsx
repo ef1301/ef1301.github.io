@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import PDF from '../assets/Resume.pdf';
 
 const Header = ({}) => {
   return (
     <header>
-      <h1>Emily Fang</h1>
+      <h1><Link to="/">Emily Fang</Link></h1>
       <div id="side-menu">
         <ul>
           <li><a href={PDF} target="_blank" rel="noreferrer" >Resume</a></li>
