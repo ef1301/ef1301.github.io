@@ -1,8 +1,9 @@
 #pfp {
-    width: 75%;
+    width: 200px;
     height: 200px;
     object-fit: cover;
     margin: 5% auto;
+    border-radius: 50%;
 }
 
 .toggle {

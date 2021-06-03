@@ -14,15 +14,15 @@ const Navbar = ({japtrans, toggleJap, toggleDarkMode, darkMode}) => {
         </li>
 
         <li>
-          <Link href="#0">{japtrans ? "プロジェクト" : "Projects"}</Link>
+          <Link to="#0">{japtrans ? "プロジェクト" : "Projects"}</Link>
         </li>
 
         <li>
-          <Link href="#0">{japtrans ? "趣味" : "Hobbies"}</Link>
+          <Link to="/hobbies">{japtrans ? "趣味" : "Hobbies"}</Link>
         </li>
 
         <li>
-          <Link href="#0">{japtrans ? "連絡する" : "Contact"}</Link>
+          <Link to="#0">{japtrans ? "連絡する" : "Contact"}</Link>
         </li>
       </ul>
 

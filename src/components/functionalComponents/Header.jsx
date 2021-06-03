@@ -9,6 +9,7 @@ const Header = ({japtrans}) => {
       <div id="side-menu">
         <ul>
           <li><a href={PDF} target="_blank" rel="noreferrer" >{japtrans ? "履歴書" : "Resume"}</a></li>
+          ・
           <li><a href="https://github.com/ef1301/ef1301.github.io">{japtrans ? "ソースコード" : "Source Code"}</a></li>
         </ul>
       </div>
