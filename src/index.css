@@ -39,12 +39,11 @@
   --sec-color: #3e4c59;
 }
 
-html {
+html{
     box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
     padding: 0;
     background-color: var(--bg-color);
+
 }
 
 body {
@@ -52,19 +51,15 @@ body {
     padding: 0;
 }
 
-#root {
-  height: 100vh;
-  width: 100vw;
-}
-
 .App {
   height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    font-family: Rajdhani;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    font-size: 1.25em;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  font-family: Rajdhani;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-size: 1.25em;
 }
 
 section {

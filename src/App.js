@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react';
+import React, {useState} from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import './styles/functional.css';
@@ -17,26 +17,25 @@ import {
 } from "./components/functionalComponents";
 import Window from './components/utils/window';
 
-const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
+//const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
-  const aboutRef = useRef(null);
-  const hobbiesRef = useRef(null);
+  const [japtrans, setJap] = useState(false);
 
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
-  const scrollToAbout = () => scrollToRef(aboutRef);
-  const scrollToHobbies = () => scrollToRef(hobbiesRef);
+  const toggleJap = () => setJap(japtrans ? false : true);
 
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <Router basename={process.env.PUBLIC_URL}>
-      <Header />
+      <Header japtrans={japtrans} />
       <Navbar 
-        refs={{aboutRef,hobbiesRef}} 
-        scroll={{scrollToAbout, scrollToHobbies}}
         darkMode={darkMode} 
-        toggleDarkMode={toggleDarkMode} />
+        toggleDarkMode={toggleDarkMode}
+        japtrans={japtrans}
+        toggleJap={toggleJap}
+        />
       <div id="page-body">
         <Switch>
           <Route exact path="/" render={() =><Window/>}/>
@@ -50,7 +49,7 @@ function App() {
           <Hobbies ref={hobbiesRef}/>
   </div>*/}
       </div>
-      <Footer/>
+      <Footer japtrans={japtrans}/>
       </Router>
     </div>
   );

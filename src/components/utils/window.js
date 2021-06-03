@@ -12,9 +12,9 @@ class Window extends Component {
         return(
         <div id="window">
             <div id="header">
-                <div onMouseEnter={shootLines} className="circle"></div>
-                <div onMouseEnter={shootLines} className="circle"></div>
-                <div onMouseEnter={shootLines} className="circle"></div>
+                <div onMouseEnter={shootLines} className="circle" style={{backgroundColor: "red"}}></div>
+                <div onMouseEnter={shootLines} className="circle" style={{backgroundColor: "yellow"}}></div>
+                <div onMouseEnter={shootLines} className="circle" style={{backgroundColor: "green"}}></div>
             </div>  
             <div className="thumbs">
                 <div className="thumb"></div>

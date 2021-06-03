@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import pfp from '../assets/pfp.jpg';
 
-const Navbar = ({refs, scroll, toggleDarkMode, darkMode}) => {
-  const [japtrans, setJap] = useState(false);
+const Navbar = ({japtrans, toggleJap, toggleDarkMode, darkMode}) => {
+
   return (
     <nav>
       {/*<div id="nav-collapsed"></div>*/}
-      <img id="pfp" src={pfp}></img>
+      <img id="pfp" src={pfp} alt="Emily Fang"></img>
       <ul id="nav-links">
         <li>
           <Link to="/about" >{japtrans ? "私について" : "About Me"}</Link>
@@ -38,7 +38,7 @@ const Navbar = ({refs, scroll, toggleDarkMode, darkMode}) => {
         日本語<br/>
         <label className="switch">
           <input type="checkbox" />
-          <span className="slider" onClick={() => setJap(japtrans ? false : true)}></span>
+          <span className="slider" onClick={toggleJap}></span>
         </label>
       </div>
         </div>

@@ -1,7 +1,5 @@
 import React from 'react';
 
-import {shootLines} from '../utils/basic-utils';
-
 const Carousel = () => {
 
     return(

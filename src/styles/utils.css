@@ -38,7 +38,7 @@
 }
 
 .toggle:checked {
-    color: hsl(240, 100%, 95%);
+    color: #202e75;
     box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
 }
 
