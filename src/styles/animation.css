@@ -1,0 +1,4 @@
+#hidden-animation {
+    transform: translateX(100%);
+    transition: transform ease-out 1s;
+}
