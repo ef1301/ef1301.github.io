@@ -45,13 +45,8 @@ header li, #dark-mode {
 
 #side-bar {
     text-align: center;
-    left: 0;
-    top: 15vh;
-    width: 25%;
-    position: fixed;
+    width: 100%;
     margin: auto;
-    z-index: 1;
-    background-color: var(--mid-color);
     overflow:visible;
 }
 
@@ -119,18 +114,21 @@ header li, #dark-mode {
     box-shadow: #1f2933 -.1rem .2rem .5rem;
 }
 
-#nav-links a {
+#nav-links a:-webkit-any-link {
     padding-right: 2vw;
     width: 100%;
     margin: auto;
-    color: black;
-    font-size: 1.25em;
+    color: var(--link-color);
+    font-size: 1em;
     text-decoration: none;
 }
 
-#nav-links li:hover {
-    background-color: #616e7c;
+#nav-links li {
+    background-color: var(--mid-color);
+}
 
+#nav-links li:hover {
+    background-color: #9aa5b1;
 }
 
 #page-utils {

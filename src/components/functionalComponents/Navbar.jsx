@@ -12,13 +12,14 @@ const Navbar = ({ japtrans, toggleJap, toggleDarkMode, darkMode }) => {
       </label>
       <input id="nav-collapse" type="checkbox"></input>
 
-      {/*<Sidebar
+
+      <div id="links-collapse">
+      <Sidebar
         japtrans={japtrans}
         toggleJap={toggleJap}
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
-      />*/}
-      <div id="links-collapse">
+      />
       <ul id="nav-links">
         <li>
           <Link to="/about">{japtrans ? "私について" : "About Me"}</Link>

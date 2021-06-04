@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.070935e7.chunk.css",
-    "main.js": "/static/js/main.bc3d91c5.chunk.js",
-    "main.js.map": "/static/js/main.bc3d91c5.chunk.js.map",
+    "main.css": "/static/css/main.d711f98b.chunk.css",
+    "main.js": "/static/js/main.3c0d5dd4.chunk.js",
+    "main.js.map": "/static/js/main.3c0d5dd4.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ae2006ec.js",
     "runtime-main.js.map": "/static/js/runtime-main.ae2006ec.js.map",
     "static/js/2.a9a991ac.chunk.js": "/static/js/2.a9a991ac.chunk.js",
     "static/js/2.a9a991ac.chunk.js.map": "/static/js/2.a9a991ac.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.070935e7.chunk.css.map": "/static/css/main.070935e7.chunk.css.map",
+    "static/css/main.d711f98b.chunk.css.map": "/static/css/main.d711f98b.chunk.css.map",
     "static/js/2.a9a991ac.chunk.js.LICENSE.txt": "/static/js/2.a9a991ac.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/ShipporiMincho-Regular.91db52cd.ttf",
     "static/media/Resume.6c874c32.pdf": "/static/media/Resume.6c874c32.pdf",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.ae2006ec.js",
     "static/js/2.a9a991ac.chunk.js",
-    "static/css/main.070935e7.chunk.css",
-    "static/js/main.bc3d91c5.chunk.js"
+    "static/css/main.d711f98b.chunk.css",
+    "static/js/main.3c0d5dd4.chunk.js"
   ]
 }

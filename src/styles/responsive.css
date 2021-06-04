@@ -1,6 +1,6 @@
 @media screen and (max-width: 1200px) {
-    nav {
-        width: 100%;
+    #links-collapse {
+        width: 30%;
         top:0;
     }
     nav li {
@@ -15,8 +15,8 @@
 }
 
 @media screen and (max-width: 800px) {
-    nav, #page-body {
-        width: 100%;
+    #links-collapse, #page-body {
+        width: 100vw;
         margin: 0;
     }
 }
