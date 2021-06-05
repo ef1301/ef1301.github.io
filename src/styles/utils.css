@@ -1,24 +1,37 @@
-#logo, #pfp {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    margin: 5% auto;
-    border-radius: 50%;
-    transition: transform 2s linear, opacity 5s ease-in;
+#side-bar {
+    text-align: center;
+    width: 100%;
+    margin: 1rem auto;
 }
 
-#logo:hover {
-    position: absolute;
+#page-utils {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-flow: row wrap;
+    text-align: left;
 }
 
-#logo:hover + #pfp {
-    display: inline-block;
-    opacity: 1;
+#page-utils h1 {
+    font-size: 1.5em;
+    font-family: Playball;
+}
+
+#utils {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
 }
 
 #pfp {
-    display: none;
-    opacity: 0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 10% auto;
+    border-radius: 50%;
+    transition: transform 2s linear, opacity 5s ease-in;
 }
 
 .toggle {

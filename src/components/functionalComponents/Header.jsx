@@ -1,17 +1,41 @@
 import React from 'react';
+import logo from '../assets/logo.png';
 import { Link } from 'react-router-dom';
-import PDF from '../assets/Resume.pdf';
 
-const Header = ({japtrans}) => {
+
+const Header = ({japtrans, toggleJap, toggleDarkMode, darkMode}) => {
   return (
     <header>
-      <h1><Link to="/">{japtrans ? "エミリー・ファング" : "Emily Fang"}</Link></h1>
-      <div id="side-menu">
-        <ul>
-          <li><a href={PDF} target="_blank" rel="noreferrer" >{japtrans ? "履歴書" : "Resume"}</a></li>
-          ・
-          <li><a href="https://github.com/ef1301/ef1301.github.io">{japtrans ? "ソースコード" : "Source Code"}</a></li>
-        </ul>
+      <h1 id="logo"><Link to="/"><img src={logo}></img>{japtrans ? "エミリー・ファング" : "Emily Fang"}</Link></h1>
+      <div id="side-header">
+
+      <label htmlFor="nav-collapse" className="hamburger">
+        <i className="hamburger__icon"></i>
+        <i className="hamburger__icon"></i>
+        <i className="hamburger__icon"></i>
+      </label>
+
+      <div id="page-utils">
+        <span id="utils">
+          <div id="dark-mode">
+            <b>{darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}</b>
+            <br />
+            <input
+              className="toggle"
+              onClick={toggleDarkMode}
+              type="checkbox"
+            />
+          </div>
+          <div id="translate">
+            日本語
+            <br />
+            <label className="switch">
+              <input type="checkbox" />
+              <span className="slider" onClick={toggleJap}></span>
+            </label>
+          </div>
+        </span>
+      </div>
       </div>
     </header>
   );

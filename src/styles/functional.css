@@ -13,20 +13,16 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
 }
 
-#side-menu {
-    width: 35%;
-}
-
-header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0 1%;
+#logo a {
     display: flex;
     flex-flow: row wrap;
-    justify-content: flex-end;
+    align-items: stretch;
+}
+#logo a img {
+    height: 2.5rem;
 }
 
 header a {
@@ -45,17 +41,20 @@ header li, #dark-mode {
     margin: 0 1%;
 }
 
-#side-bar {
-    text-align: center;
-    width: 100%;
-    margin: auto;
-    overflow:visible;
+#side-header {
+    position: relative;
+}
+
+#side-menu {
+    list-style-type: none;
+    margin: 5% auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 }
 
 .hamburger {
-    position: fixed;
     display: flex;
-    top: 5vh;
     left: 1vw;
     height: 18px;
     width: 24px;
@@ -81,7 +80,7 @@ header li, #dark-mode {
 #nav-collapse + #links-collapse, #nav-collapse + #side-bar {
     transition: transform 0.4s ease-in-out;
     transform: translatex(-100%);
-    background-color: white;
+    background-color: var(--subbg-color);
 }
 
 #nav-collapse:checked + #links-collapse, #nav-collapse + #side-bar {
@@ -93,7 +92,7 @@ header li, #dark-mode {
     background-color: white;
     height: 100%;
     width: 25%;
-    bottom: 0;
+    top: 0;
     left: 0;
     display: flex;
     flex-flow: column wrap;
@@ -112,19 +111,17 @@ header li, #dark-mode {
 }
 
 #nav-links li {
-    width: 100%;
-    text-align: right;
+    text-align: center;
     margin: 1% 0;
     transition: background-color 500ms, opacity 400ms;
     box-shadow: #1f2933 -.1rem .2rem .5rem;
 }
 
 #nav-links a:-webkit-any-link {
-    padding-right: 2vw;
     width: 100%;
     margin: auto;
     color: var(--link-color);
-    font-size: 1.15em;
+    font-size: 1.25em;
     text-decoration: none;
 }
 
@@ -134,24 +131,6 @@ header li, #dark-mode {
 
 #nav-links li:hover {
     background-color: #9aa5b1;
-}
-
-#page-utils {
-    padding-bottom: 4%;
-    font-size: .75em;
-    text-align: left;
-}
-
-#page-utils h1 {
-    font-size: 1.5em;
-    font-family: Playball;
-}
-
-#utils {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    text-align: center;
 }
 
 #page-body {

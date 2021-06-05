@@ -1,16 +1,27 @@
 @media screen and (max-width: 1200px) {
+    #nav-collapse + #links-collapse, #nav-collapse + #side-bar {
+        transition: transform 0.4s ease-in-out;
+        transform: translateY(-100%);
+        background-color: white;
+    }
+    
+    #nav-collapse:checked + #links-collapse, #nav-collapse + #side-bar {
+        transform: translatex(0%);
+    }
     #links-collapse {
         width: 30%;
         top:0;
     }
+
     nav li {
         width: 100%;
         padding: 0;
         margin: 0;
         box-shadow: none;
+        text-align: center;
     }
 
-    #nav-links a:-webkit-any-link {
+    #nav-links li {
         width: 100%;
         text-align: center;
     }
