@@ -5,11 +5,9 @@
 }
 
 #page-utils {
-    background-color: black;
-    color: white;
     position: fixed;
     width: auto;
-    bottom: 5vh;
+    bottom: 20vh;
     right: 0;
     display: flex;
     flex-flow: row wrap;

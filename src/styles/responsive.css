@@ -8,6 +8,7 @@
     #nav-collapse:checked + #links-collapse, #nav-collapse + #side-bar {
         transform: translatex(0%);
     }
+    
     #links-collapse {
         width: 30%;
         top:0;

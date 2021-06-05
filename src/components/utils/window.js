@@ -2,8 +2,6 @@ import React, {Component} from 'react';
 import Carousel from './carousel';
 import '../../styles/windowCarousel.css';
 
-import {shootLines} from './basic-utils';
-
 class Window extends Component {
 
     state

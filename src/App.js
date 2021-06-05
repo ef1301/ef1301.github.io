@@ -4,12 +4,10 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./styles/functional.css";
 import "./styles/responsive.css";
 import "./styles/utils.css";
-
-//import { shootLines } from './styles/basic-utils.js';
-
 //Components
 import About from "./components/containers/About.js";
-import Hobbies from "./components/containers/Hobbies.js";
+//import Hobbies from "./components/containers/Hobbies.js";
+import WorkingOnIt from "./components/containers/WorkingOnIt.js";
 import { Header, Navbar, Footer } from "./components/functionalComponents";
 import Window from "./components/utils/window";
 
@@ -18,10 +16,11 @@ import Window from "./components/utils/window";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [japtrans, setJap] = useState(false);
-  const [menuOpen, setMenu] = useState(false);
 
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   const toggleJap = () => setJap(japtrans ? false : true);
+
+  const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
@@ -42,14 +41,10 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <Window />} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/hobbies" component={Hobbies} />
+            <Route exact path="/hobbies" component={WorkingOnItComponent} />
+            <Route exact path="/projects" component={WorkingOnItComponent} />
+            <Route exact path="/contact" component={WorkingOnItComponent} />
           </Switch>
-          {/*<div ref={aboutRef}>
-          <About ref={aboutRef}/>
-        </div>
-        <div ref={hobbiesRef}>
-          <Hobbies ref={hobbiesRef}/>
-  </div>*/}
         </div>
         <Footer japtrans={japtrans} />
       </Router>

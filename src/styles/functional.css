@@ -1,15 +1,22 @@
 [data-theme="dark"] {
     --mid-color: #616e7c;
-    --bg-color: #1f2933;
+    --bg-color: #121212;
     --subbg-color: #323f4b;
     --link-color: #e4e7eb;
     --text-color: #e4e7eb;
+    --accent-color: #ceccff;
     --sec-color: #3e4c59;
 }
 
 [data-theme="light"] {
     --bg-color: white;
     --subbg-color: white;
+    --text-color: black;
+    --accent-color: #FA4A4A;
+    --header-color: #900404;
+}
+
+h1, h2, h3, h4, h5, h6 {
 }
 
 header {
@@ -22,22 +29,24 @@ header {
 }
 
 #logo a {
+    color: var(--accent-color);
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
 }
+
 #logo a img {
     height: 2.5rem;
 }
 
 header a {
     animation: grow 1s linear;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
 }
 
 header a:hover {
-    color: black;
+    color: var(--text-color);
     text-decoration: underline;
 
 }
@@ -67,8 +76,8 @@ nav {
 .hamburger {
     display: flex;
     left: 1vw;
-    height: 18px;
-    width: 24px;
+    height: 1.5rem;
+    width: 2rem;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
@@ -78,9 +87,9 @@ nav {
 
 .hamburger__icon {
     display: inline-block;
-    height: 2px;
-    width: 24px;
-    background: black;
+    height: .2rem;
+    width: 2rem;
+    background: var(--text-color);
     border-radius: 2px;
 }
 
@@ -140,7 +149,7 @@ nav {
 }
 
 #nav-links li:hover {
-    background-color: #9aa5b1;
+    background-color: var(--accent-color);
 }
 
 #page-body {
@@ -153,4 +162,19 @@ footer {
     width: 100%;
     padding: 2%;
     text-align: right;
+    color: var(--accent-color);
+}
+
+footer h2 {
+    color: var(--accent-color);
+}
+
+#working-on-it { 
+    text-align: center;
+    padding: 5%;
+    background-color: var(--sec-color);
+}
+
+#working-on-it img { 
+    width: 50%;
 }
