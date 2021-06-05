@@ -1,15 +1,16 @@
 import React from "react";
 import pfp from "../assets/pfp.jpg";
+import logo from "../assets/logo.svg";
 
-const Sidebar = ({ japtrans, toggleJap, toggleDarkMode, darkMode }) => {
+const Sidebar = ({ toggleJap, toggleDarkMode, darkMode }) => {
   return (
     <div id="side-bar">
+      <img id="logo" src={logo} alt="logo"></img>
       <img id="pfp" src={pfp} alt="Emily Fang"></img>
-
       <div id="page-utils">
         <span id="utils">
           <div id="dark-mode">
-            <b>{darkMode ? "Light Mode" : "Dark Mode"}</b>
+            <b>{darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}</b>
             <br />
             <input
               className="toggle"

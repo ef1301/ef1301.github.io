@@ -9,6 +9,11 @@
         margin: 0;
         box-shadow: none;
     }
+
+    #nav-links a:-webkit-any-link {
+        width: 100%;
+        text-align: center;
+    }
     #page-body {
         width: 70%;
     }

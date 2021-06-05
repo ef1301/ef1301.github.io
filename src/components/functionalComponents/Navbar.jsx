@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Sidebar from './Sidebar';
 
 const Navbar = ({ japtrans, toggleJap, toggleDarkMode, darkMode }) => {
+  const wrapperRef = useRef(null);
+
   return (
-    <nav>
+    <nav >
       <label htmlFor="nav-collapse" className="hamburger">
         <i className="hamburger__icon"></i>
         <i className="hamburger__icon"></i>
@@ -15,7 +17,6 @@ const Navbar = ({ japtrans, toggleJap, toggleDarkMode, darkMode }) => {
 
       <div id="links-collapse">
       <Sidebar
-        japtrans={japtrans}
         toggleJap={toggleJap}
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}

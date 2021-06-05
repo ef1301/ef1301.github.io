@@ -63,6 +63,7 @@ body {
 
 section {
   background-color: var(--sec-color);
+  padding: 1%;
 }
 
  header a, a:active, a:visited {
