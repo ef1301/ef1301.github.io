@@ -7,6 +7,11 @@
     --sec-color: #3e4c59;
 }
 
+[data-theme="light"] {
+    --bg-color: white;
+    --subbg-color: white;
+}
+
 header {
     padding: 1% 3%;
     width: 100%;
@@ -53,6 +58,12 @@ header li, #dark-mode {
     justify-content: flex-end;
 }
 
+nav {
+    background-color: white;
+    height: 100%;
+    width: 25%;
+}
+
 .hamburger {
     display: flex;
     left: 1vw;
@@ -89,7 +100,6 @@ header li, #dark-mode {
 
 #links-collapse {
     position: fixed;
-    background-color: white;
     height: 100%;
     width: 25%;
     top: 0;
@@ -136,7 +146,7 @@ header li, #dark-mode {
 #page-body {
     width: 100%;
     padding: 1%;
-    margin: auto 0 auto 20%;
+    margin: auto 20% auto 5%;
 }
 
 footer {
