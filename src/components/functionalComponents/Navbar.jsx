@@ -3,12 +3,21 @@ import { Link } from "react-router-dom";
 import pfp from "../assets/pfp.png";
 import PDF from "../assets/Resume.pdf";
 
-const Navbar = ({ japtrans, toggleJap, toggleDarkMode, darkMode }) => {
+const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
   return (
     <nav>
-      <input id="nav-collapse" type="checkbox"></input>
-
+      <input id="nav-collapse" type="checkbox" value={menuCollapse}></input>
       <div id="links-collapse">
+        <div className="closed">
+          <label
+            htmlFor="nav-collapse"
+            className="hamburger"
+            onClick={toggleCollapse}
+          >
+            <i id="close__icon">Close</i>
+          </label>
+        </div>
+
         <div id="side-bar">
           <img id="pfp" src={pfp} alt="Emily Fang"></img>
         </div>

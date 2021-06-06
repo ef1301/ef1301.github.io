@@ -16,9 +16,11 @@ import Window from "./components/utils/window";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [japtrans, setJap] = useState(false);
+  const [menuCollapse, setCollapse] = useState(true);
 
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   const toggleJap = () => setJap(japtrans ? false : true);
+  const toggleCollapse = () => setCollapse(menuCollapse ? false : true);
 
   const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
@@ -32,10 +34,10 @@ function App() {
           toggleJap={toggleJap}
         />
         <Navbar
-          darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode}
           japtrans={japtrans}
           toggleJap={toggleJap}
+          menuCollapse={menuCollapse}
+          toggleCollapse={toggleCollapse}
         />
         <div id="page-body">
           <Switch>
