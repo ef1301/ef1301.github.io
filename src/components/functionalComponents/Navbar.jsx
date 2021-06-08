@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import pfp from "../assets/pfp.png";
-import PDF from "../assets/Resume.pdf";
 
-import {hamburgerLines} from '../utils/basic-utils.js';
+import NavLogo from "../assets/NavLogo.png"
 
-const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
+import { hamburgerLines } from "../utils/basic-utils.js";
+
+const Navbar = ({ japtrans, toggleJap, menuCollapse, toggleCollapse, darkMode, toggleDarkMode }) => {
   return (
     <nav>
       <input id="nav-collapse" type="checkbox" value={menuCollapse}></input>
@@ -21,9 +21,10 @@ const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
           </label>
         </div>
 
-        <div id="side-bar">
-          <img id="pfp" src={pfp} alt="Emily Fang"></img>
-          <ul id="nav-links">
+        
+
+        <ul id="nav-links">
+        <img id="pfp" src={NavLogo} alt="Alt Logo"></img>
           <Link to="/">
             <li>{japtrans ? "ホームページ" : "Home"}</li>
           </Link>
@@ -36,20 +37,35 @@ const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
           <Link to="/hobbies">
             <li>{japtrans ? "趣味" : "Hobbies"}</li>
           </Link>
-          <Link to="/contact">
-            <li>{japtrans ? "連絡する" : "Contact"}</li>
-          </Link>
         </ul>
-        </div>
 
-        <div id="side-menu">
-          <a href={PDF} target="_blank" rel="noreferrer">
-            {japtrans ? "履歴書" : "Resume"}
-          </a>
-          ・
-          <a href="https://github.com/ef1301/ef1301.github.io">
-            {japtrans ? "ソースコード" : "Source Code"}
-          </a>
+        <div id="side-bar">
+          <div id="page-utils">
+            <span id="utils">
+              <div id="dark-mode">
+                <b>
+                  <label htmlFor="dark-mode-toggle">
+                    {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
+                  </label>
+                </b>
+                <br />
+                <input
+                  className="toggle"
+                  onClick={toggleDarkMode}
+                  id="dark-mode-toggle"
+                  type="checkbox"
+                />
+              </div>
+              <div id="translate">
+                日本語
+                <br />
+                <label className="switch">
+                  <input type="checkbox" />
+                  <span className="slider" onClick={toggleJap}></span>
+                </label>
+              </div>
+            </span>
+          </div>
         </div>
       </div>
     </nav>

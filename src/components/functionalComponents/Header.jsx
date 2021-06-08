@@ -21,7 +21,11 @@ const Header = ({ japtrans, toggleJap, toggleDarkMode, darkMode, toggleCollapse 
           <i className="hamburger__icon"></i>
           <i className="hamburger__icon"></i>
         </label>
-
+      </div>
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
       </div>
     </header>
   );

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/functional.css";
 import "./styles/responsive.css";
+import "./styles/animation.css";
 import "./styles/utils.css";
 //Components
 import About from "./components/containers/About.js";
@@ -44,6 +45,8 @@ function App() {
           toggleJap={toggleJap}
           menuCollapse={menuCollapse}
           toggleCollapse={toggleCollapse}
+          darkMode={darkMode}
+          toggleDarkMode={toggleDarkMode}
         />
         <div id="page-body">
           <Switch>

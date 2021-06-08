@@ -31,14 +31,6 @@
     --text-color: #000;
 }
 
-[data-theme="dark"] {
-  --mid-color: #616e7c;
-  --bg-color: #1f2933;
-  --link-color: #e4e7eb;
-  --text-color: #e4e7eb;
-  --sec-color: #3e4c59;
-}
-
 html{
   box-sizing: border-box;
   padding: 0;
@@ -61,16 +53,7 @@ body {
   font-size: 1.25em;
 }
 
-section {
-  background-color: var(--sec-color);
-  padding: 1%;
-}
-
- header a, a:active, a:visited {
+header a, a:active, a:visited {
     text-decoration: none;
     color: var(--link-color);
-}
-
-nav {
-  background-color: var(--mid-color);
 }

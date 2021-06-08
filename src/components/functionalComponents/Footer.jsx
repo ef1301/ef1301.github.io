@@ -1,41 +1,34 @@
-import React from 'react';
+import React from "react";
+import PDF from "../assets/Resume.pdf";
 
-const Footer = ({japtrans, toggleJap, darkMode, toggleDarkMode}) => {
+const Footer = ({ japtrans }) => {
   return (
     <footer>
-              
+      <div className="lines">
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
 
-              <div id="page-utils">
-          <input type="checkbox" id="utils-toggle"></input>
-          <span id="utils">
-            <div id="dark-mode">
-              <b>
-                <label htmlFor="dark-mode-toggle">
-                  {darkMode ? "Toggle Light Mode" : "Toggle Dark Mode"}
-                </label>
-              </b>
-              <br />
-              <input
-                className="toggle"
-                onClick={toggleDarkMode}
-                id="dark-mode-toggle"
-                type="checkbox"
-              />
-            </div>
-            <div id="translate">
-              日本語
-              <br />
-              <label className="switch">
-                <input type="checkbox" />
-                <span className="slider" onClick={toggleJap}></span>
-              </label>
-            </div>
-          </span>
-          <label htmlFor="utils-toggle" id="page-utils-tab"></label>
-        </div>
-      <h2>{japtrans ? "太陽はまた昇り、私たちはまた挑戦する" : "The sun will rise and we will try again."}</h2>
+      <div id="side-footer">
+        <a href={PDF} target="_blank" rel="noreferrer">
+          {japtrans ? "履歴書" : "Resume"}
+        </a>
+        ・
+        <a href="https://github.com/ef1301/ef1301.github.io">
+          {japtrans ? "ソースコード" : "Source Code"}
+        </a>
+      </div>
+
+      <h2>
+        {japtrans
+          ? "太陽はまた昇り、私たちはまた挑戦する"
+          : "The sun will rise and we will try again."}
+      </h2>
+
+
     </footer>
   );
-}
+};
 
 export default Footer;
