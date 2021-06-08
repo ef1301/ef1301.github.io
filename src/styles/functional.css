@@ -15,7 +15,7 @@
   --shadow-color: #616e7c;
   --text-color: black;
   --accent-color: #fa4a4a;
-  --subaccent-color: #510000;
+  --subaccent-color: #9e2424;
   --header-color: #900404;
 }
 
@@ -36,6 +36,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--bg-color);
+  border-bottom: solid .25em var(--subaccent-color);
 }
 
 #logo a {
@@ -90,7 +91,7 @@ nav {
 #nav-collapse + #links-collapse,
 #nav-collapse + #side-bar {
   transition: transform 0.5s ease-in-out;
-  transform: translatex(100%);
+  transform: translatex(101%);
   background-color: var(--bg-color);
 }
 

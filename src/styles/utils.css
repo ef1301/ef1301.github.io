@@ -5,9 +5,15 @@
 }
 
 #page-utils {
+    background-color: var(--bg-color);
+    border: solid .5em var(--text-color);
   position: fixed;
-  bottom: 20vh;
-  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
 }
 
 #page-utils h1 {
@@ -15,13 +21,17 @@
   font-family: Playball;
 }
 
+#utils-toggle {
+  display: none;
+}
+
 #utils {
-  width: auto;
-  margin: auto;
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
+  flex-flow: column wrap;
+  justify-content: flex-start;
   text-align: center;
+  overflow: hidden;
+  margin: 5% 0;
 }
 
 #pfp {

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/functional.css";
@@ -11,7 +11,7 @@ import WorkingOnIt from "./components/containers/WorkingOnIt.js";
 import { Header, Navbar, Footer } from "./components/functionalComponents";
 import Window from "./components/utils/window";
 
-import { OutsideClick } from "./components/utils/basic-utils";
+//import { OutsideClick } from "./components/utils/basic-utils";
 
 //const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -35,8 +35,6 @@ function App() {
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <Router basename={process.env.PUBLIC_URL}>
         <Header
-          darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode}
           japtrans={japtrans}
           toggleJap={toggleJap}
           toggleCollapse={toggleCollapse}
@@ -56,7 +54,12 @@ function App() {
             <Route exact path="/contact" component={WorkingOnItComponent} />
           </Switch>
         </div>
-        <Footer japtrans={japtrans} />
+        <Footer 
+        japtrans={japtrans}
+        toggleJap={toggleJap}
+        darkMode={darkMode}
+        toggleDarkMode={toggleDarkMode}
+         />
       </Router>
     </div>
   );
