@@ -3,7 +3,7 @@ import React from 'react';
 const Hobbies = () => {
     return (
       <div id ="hobbies">
-        {/*<h2>Hobbies</h2>
+        <h2>Hobbies</h2>
           <ul>
             <li>Instruments
               <ul>
@@ -23,7 +23,7 @@ const Hobbies = () => {
                 <li>Rakuen</li>
               </ul>
             </li>
-        </ul>*/}
+        </ul>
       </div>
     )
 }

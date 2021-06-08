@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/functional.css";
@@ -6,10 +6,12 @@ import "./styles/responsive.css";
 import "./styles/utils.css";
 //Components
 import About from "./components/containers/About.js";
-//import Hobbies from "./components/containers/Hobbies.js";
+import Hobbies from "./components/containers/Hobbies.js";
 import WorkingOnIt from "./components/containers/WorkingOnIt.js";
 import { Header, Navbar, Footer } from "./components/functionalComponents";
 import Window from "./components/utils/window";
+
+import { OutsideClick } from "./components/utils/basic-utils";
 
 //const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
@@ -24,6 +26,11 @@ function App() {
 
   const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
+  /*const boxRef = useRef(null);
+    const collapse = () => setCollapse(boxOutsideClick);
+  const boxOutsideClick = OutsideClick(boxRef); 
+  console.log(boxOutsideClick);*/
+
   return (
     <div className="App" data-theme={darkMode ? "dark" : "light"}>
       <Router basename={process.env.PUBLIC_URL}>
@@ -32,6 +39,7 @@ function App() {
           toggleDarkMode={toggleDarkMode}
           japtrans={japtrans}
           toggleJap={toggleJap}
+          toggleCollapse={toggleCollapse}
         />
         <Navbar
           japtrans={japtrans}
@@ -43,7 +51,7 @@ function App() {
           <Switch>
             <Route exact path="/" render={() => <Window />} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/hobbies" component={WorkingOnItComponent} />
+            <Route exact path="/hobbies" component={Hobbies} />
             <Route exact path="/projects" component={WorkingOnItComponent} />
             <Route exact path="/contact" component={WorkingOnItComponent} />
           </Switch>

@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import pfp from "../assets/pfp.png";
 import PDF from "../assets/Resume.pdf";
 
+import {hamburgerLines} from '../utils/basic-utils.js';
+
 const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
   return (
     <nav>
@@ -11,17 +13,17 @@ const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
         <div className="closed">
           <label
             htmlFor="nav-collapse"
-            className="hamburger"
             onClick={toggleCollapse}
+            id="close-nav-toggle"
+            onMouseEnter={hamburgerLines}
           >
-            <i id="close__icon">Close</i>
+            Close
           </label>
         </div>
 
         <div id="side-bar">
           <img id="pfp" src={pfp} alt="Emily Fang"></img>
-        </div>
-        <ul id="nav-links">
+          <ul id="nav-links">
           <Link to="/">
             <li>{japtrans ? "ホームページ" : "Home"}</li>
           </Link>
@@ -38,20 +40,17 @@ const Navbar = ({ japtrans, menuCollapse, toggleCollapse }) => {
             <li>{japtrans ? "連絡する" : "Contact"}</li>
           </Link>
         </ul>
+        </div>
 
-        <ul id="side-menu">
-          <li>
-            <a href={PDF} target="_blank" rel="noreferrer">
-              {japtrans ? "履歴書" : "Resume"}
-            </a>
-          </li>
+        <div id="side-menu">
+          <a href={PDF} target="_blank" rel="noreferrer">
+            {japtrans ? "履歴書" : "Resume"}
+          </a>
           ・
-          <li>
-            <a href="https://github.com/ef1301/ef1301.github.io">
-              {japtrans ? "ソースコード" : "Source Code"}
-            </a>
-          </li>
-        </ul>
+          <a href="https://github.com/ef1301/ef1301.github.io">
+            {japtrans ? "ソースコード" : "Source Code"}
+          </a>
+        </div>
       </div>
     </nav>
   );

@@ -10,6 +10,7 @@
     }
     
     #links-collapse {
+        overflow-y: scroll;
         width: 30%;
         top:0;
     }

@@ -1,5 +1,24 @@
+import { useEffect, useState } from 'react';
 import mojs from "@mojs/core";
 
+export function OutsideClick(ref) {
+  const [isClicked, setIsClicked] = useState();
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (ref.current && !ref.current.contains(event.target)) {
+        setIsClicked(true);
+      } else {
+        setIsClicked(false);
+      }
+    }
+  
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [ref]);
+    return isClicked;
+  }
 
 export function hamburgerLines(e) {
   const itemDim = e.target.getBoundingClientRect(),
@@ -19,11 +38,9 @@ export function hamburgerLines(e) {
     left: itemDim.left + (itemSize.x/2),
     top: itemDim.top + (itemSize.y/2),
     count: 6,
-    radiusX: itemSize.x,
-    radiusY: itemSize.y,
     children: {
       shape: "line",
-      radius: 10,
+      radius: 5,
       scale: {2: 1},
       fill: 'none',
       points: 7,

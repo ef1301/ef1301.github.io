@@ -3,7 +3,7 @@ import React from "react";
 import Logo from '../assets/Logo';
 import { Link } from "react-router-dom";
 
-import {hamburgerLines} from '../utils/basic-utils';
+import {hamburgerLines} from '../utils/basic-utils.js';
 
 const Header = ({ japtrans, toggleJap, toggleDarkMode, darkMode, toggleCollapse }) => {
   return (
@@ -16,11 +16,12 @@ const Header = ({ japtrans, toggleJap, toggleDarkMode, darkMode, toggleCollapse 
         </Link>
       </h1>
       <div id="side-header">
-        <label htmlFor="nav-collapse" className="hamburger" onClick={toggleCollapse}>
+        <label htmlFor="nav-collapse" className="hamburger" onMouseEnter={hamburgerLines} onClick={toggleCollapse}>
           <i className="hamburger__icon"></i>
           <i className="hamburger__icon"></i>
           <i className="hamburger__icon"></i>
         </label>
+        
 
         <div id="page-utils">
           <span id="utils">
