@@ -1,23 +1,39 @@
 import React from "react";
 import pfp from "../assets/pfp.png";
+import "../../styles/about.scss";
 
 const About = React.forwardRef((props, ref) => {
   return (
     <div id="about" ref={ref}>
-      <img id="pfp" src={pfp} alt="Emily Fang"></img>
-      <h2>About Me</h2>
-      <p id="details">
-        My name is Emily Fang and I am an undergraduate attending Hunter
-        College.
-      </p>
-      <div>
-        <h3>I am...</h3>
-        <ul>
-          <li>An Aspiring Vegetarian</li>
-          <li>An Asexual 🏳️‍🌈 </li>
-          <li>A Lover of the Arts</li>
-          <li>An Animal Enthusiast</li>
-        </ul>
+      <div id="about-bio">
+        <img id="pfp" src={pfp} alt="Emily Fang"></img>
+        <div id="bio">
+          <h2>About Me, Emily Fang.</h2>
+          My name is Emily Fang and I am an undergraduate attending Hunter
+          College. I major in Computer Science and minor in Mathematics. I
+          specialize in front-end and UX/UI development. I hope to utilize this
+          web app for more than portfolio use and have it reflect my interests,
+          my mindset, and more. 
+          <details>
+          <summary>I am...</summary>
+          <ul>
+            <li>An Aspiring Vegetarian</li>
+            <li>An Asexual 🏳️‍🌈 </li>
+            <li>A Lover of the Arts</li>
+            <li>An Animal Enthusiast</li>
+          </ul>
+        </details>
+        </div>
+
+        <details>
+          <summary>My Coursework</summary>
+          <ul>
+            <li>An Aspiring Vegetarian</li>
+            <li>An Asexual 🏳️‍🌈 </li>
+            <li>A Lover of the Arts</li>
+            <li>An Animal Enthusiast</li>
+          </ul>
+        </details>
       </div>
 
       <div id="cs-journey">

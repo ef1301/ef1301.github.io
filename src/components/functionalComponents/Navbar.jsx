@@ -1,11 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import NavLogo from "../assets/NavLogo.png"
+import NavLogo from "../assets/NavLogo.png";
 
-import { hamburgerLines } from "../utils/basic-utils.js";
-
-const Navbar = ({ japtrans, toggleJap, menuCollapse, toggleCollapse, darkMode, toggleDarkMode }) => {
+const Navbar = ({
+  japtrans,
+  toggleJap,
+  menuCollapse,
+  toggleCollapse,
+  darkMode,
+  toggleDarkMode,
+}) => {
   return (
     <nav>
       <input id="nav-collapse" type="checkbox" value={menuCollapse}></input>
@@ -15,16 +20,13 @@ const Navbar = ({ japtrans, toggleJap, menuCollapse, toggleCollapse, darkMode, t
             htmlFor="nav-collapse"
             onClick={toggleCollapse}
             id="close-nav-toggle"
-            onMouseEnter={hamburgerLines}
           >
             Close
           </label>
         </div>
 
-        
-
         <ul id="nav-links">
-        <img id="pfp" src={NavLogo} alt="Alt Logo"></img>
+          <img id="pfp" src={NavLogo} alt="Alt Logo"></img>
           <Link to="/">
             <li>{japtrans ? "ホームページ" : "Home"}</li>
           </Link>

@@ -1,0 +1,19 @@
+#about-bio {
+  width: 90%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  #pfp {
+    width: 20%;
+    height: 20%;
+    padding: 5%;
+  }
+}
+
+#bio {
+  width: 70%;
+  details,
+  summary {
+    margin: 3% auto;
+  }
+}

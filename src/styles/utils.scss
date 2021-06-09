@@ -7,11 +7,10 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
-}
-
-#page-utils h1 {
-  font-size: 1.5em;
-  font-family: Playball;
+  &:h1 {
+    font-size: 1.5em;
+    font-family: Playball;
+  }
 }
 
 #utils {
@@ -63,11 +62,11 @@
     var(--offset-diagonal) calc(var(--offset-diagonal) * -1) 0 var(--ray-size);
 
   transition: all 500ms;
-}
 
-.toggle:checked {
-  color: #ceccff;
-  box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  &:checked {
+    color: #ceccff;
+    box-shadow: inset calc(var(--size) * 0.33) calc(var(--size) * -0.25) 0;
+  }
 }
 
 .switch {
@@ -75,12 +74,18 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-}
-
-.switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    &:checked + .slider {
+      background-color: #2196f3;
+    }
+    
+    &:focus + .slider {
+      box-shadow: 0 0 1px #2196f3;
+    }
+  }
 }
 
 .slider {
@@ -93,26 +98,17 @@
   background-color: #3f3f3f;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-}
-
-.slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-input:checked + .slider {
-  background-color: #2196f3;
-}
-
-input:focus + .slider {
-  box-shadow: 0 0 1px #2196f3;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
 }
 
 input:checked + .slider:before {
@@ -123,7 +119,6 @@ input:checked + .slider:before {
 
 .hamburger {
   display: flex;
-  left: 1vw;
   height: 1.5rem;
   width: 2rem;
   flex-direction: column;
@@ -142,10 +137,6 @@ input:checked + .slider:before {
   border-radius: 2px;
 }
 
-.hamburger:hover + .hamburger__icon {
-  background: var(--accent-color);
-}
-
 .closed {
   display: flex;
   justify-content: flex-end;
@@ -154,53 +145,53 @@ input:checked + .slider:before {
 #close-nav-toggle {
   padding: 1rem;
   font-size: 1.5rem;
-  color: var(--text-color);
+  color: var(--accent-color);
+  &:hover::before {
+    content: "X";
+    color: var(--accent-color);
+  }
 }
 
-#close-nav-toggle:hover {
-  color: var(--accent-color);
+footer .lines {
+  margin-top: 5%;
 }
 
 .lines {
+  z-index: 0;
   width: 90vw;
   margin: auto;
   height: 1rem;
 }
 
 .line {
-    position: absolute;
+  position: absolute;
   height: 2px;
   width: 90vw;
   background: var(--header-bottom);
   overflow: hidden;
-}
-
-.line:after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 15vw;
-  height: 100%;
-  background: linear-gradient(
-    to right,
-    var(--header-bottom) 0%,
-    var(--accent-color) 75%,
-    var(--accent-color) 100%
-  );
-  animation: flow 5s 0s infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-
-.line:nth-child(1):after {
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 15vw;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      var(--header-bottom) 0%,
+      var(--accent-color) 75%,
+      var(--accent-color) 100%
+    );
+    animation: flow 5s 0s infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+  }
+  &:nth-child(1):after {
     animation-delay: 1s;
+  }
+  &:nth-child(2):after {
+    animation-delay: 0.5s;
+  }
+  &:nth-child(3):after {
+    animation-delay: 2s;
+  }
 }
-
-.line:nth-child(2):after {
-    animation-delay: .5s;
-}
-
-.line:nth-child(3):after {
-  animation-delay: 2s;
-}
-

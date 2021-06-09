@@ -96,6 +96,6 @@ export function shootLines(e) {
       isShowEnd: false,
     }
   });
-
+  
   burst.play();
 }

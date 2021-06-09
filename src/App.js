@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import "./styles/functional.css";
-import "./styles/responsive.css";
-import "./styles/animation.css";
-import "./styles/utils.css";
+import "./styles/functional.scss";
+import "./styles/responsive.scss";
+import "./styles/animation.scss";
+import "./styles/utils.scss";
 //Components
 import About from "./components/containers/About.js";
 import Hobbies from "./components/containers/Hobbies.js";
