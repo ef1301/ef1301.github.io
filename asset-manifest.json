@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.641c6d27.chunk.css",
-    "main.js": "/static/js/main.bc0554cc.chunk.js",
-    "main.js.map": "/static/js/main.bc0554cc.chunk.js.map",
+    "main.js": "/static/js/main.2ef09543.chunk.js",
+    "main.js.map": "/static/js/main.2ef09543.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.ae2006ec.js",
     "runtime-main.js.map": "/static/js/runtime-main.ae2006ec.js.map",
-    "static/js/2.b42fbab0.chunk.js": "/static/js/2.b42fbab0.chunk.js",
-    "static/js/2.b42fbab0.chunk.js.map": "/static/js/2.b42fbab0.chunk.js.map",
+    "static/js/2.912ff495.chunk.js": "/static/js/2.912ff495.chunk.js",
+    "static/js/2.912ff495.chunk.js.map": "/static/js/2.912ff495.chunk.js.map",
     "index.html": "/index.html",
     "static/css/main.641c6d27.chunk.css.map": "/static/css/main.641c6d27.chunk.css.map",
-    "static/js/2.b42fbab0.chunk.js.LICENSE.txt": "/static/js/2.b42fbab0.chunk.js.LICENSE.txt",
+    "static/js/2.912ff495.chunk.js.LICENSE.txt": "/static/js/2.912ff495.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/ShipporiMincho-Regular.91db52cd.ttf",
     "static/media/NavLogo.1e1843ea.png": "/static/media/NavLogo.1e1843ea.png",
     "static/media/Resume.6c874c32.pdf": "/static/media/Resume.6c874c32.pdf",
@@ -18,8 +18,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.ae2006ec.js",
-    "static/js/2.b42fbab0.chunk.js",
+    "static/js/2.912ff495.chunk.js",
     "static/css/main.641c6d27.chunk.css",
-    "static/js/main.bc0554cc.chunk.js"
+    "static/js/main.2ef09543.chunk.js"
   ]
 }
