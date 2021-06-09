@@ -13,6 +13,7 @@
 [data-theme="light"] {
   --bg-color: white;
   --subbg-color: #f5f5f5;
+  --link-color: black;
   --text-color: black;
   --accent-color: #fa4a4a;
   --subaccent-color: #9e2424;
@@ -20,7 +21,7 @@
   --header-bottom: rgba(1, 1, 1, 0.1);
 }
 
-#logo{
+#logo {
   #e {
     fill: var(--accent-color);
   }
@@ -38,7 +39,7 @@
       width: auto;
     }
   }
-} 
+}
 
 header {
   padding: 1rem 2rem;
@@ -57,7 +58,8 @@ header {
       text-shadow: 0.1rem 0.1rem 0.05em var(--subaccent-color);
     }
   }
-  &:li, #dark-mode {
+  &:li,
+  #dark-mode {
     margin: 0 1%;
   }
 }
@@ -109,19 +111,23 @@ nav {
   justify-content: space-around;
   margin: 8% auto;
   li {
-    text-align: center;
-    margin: 1% 0;
+    margin: 1% auto;
   }
   a:-webkit-any-link {
     width: 100%;
-    margin: 0 auto;
+    text-align: center;
     color: var(--link-color);
     font-size: 1.25em;
     text-decoration: none;
+    background: none;
+    transition: all 0.5s ease-in-out;
+    &:hover, &:focus {
+      background-image: linear-gradient(to right,var(--accent-color),var(--subaccent-color));
+    }
   }
+
   a {
-    transition: background-color 1ms, opacity 400ms;
-    border-bottom: var(--accent-color) .1rem solid;
+    border-bottom: var(--accent-color) 0.1rem solid;
     &:hover {
       background-color: var(--subaccent-color);
       color: var(--bg-color);
@@ -139,7 +145,7 @@ footer {
   width: 100%;
   padding: 2%;
   text-align: right;
-  color: var(--accent-color);
+  color: var(--text-color);
   #side-footer {
     display: inline-flex;
     flex-flow: row wrap;

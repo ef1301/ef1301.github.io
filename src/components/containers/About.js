@@ -3,6 +3,21 @@ import pfp from "../assets/pfp.png";
 import "../../styles/about.scss";
 
 const About = React.forwardRef((props, ref) => {
+  const courses = [
+    "Advanced Programming Languages",
+    "Computer Architecture",
+    "Computer Theory",
+    "Data Structures and Algorithms",
+    "Database Management",
+    "Digital Product Development",
+    "Discrete Structures",
+    "Introduction to Blockchain",
+    "Operating Systems",
+    "Practical Web Development",
+    "Relational Databases & SQL Programming",
+    "Software Analysis & Design",
+  ];
+
   return (
     <div id="about" ref={ref}>
       <div id="about-bio">
@@ -13,25 +28,22 @@ const About = React.forwardRef((props, ref) => {
           College. I major in Computer Science and minor in Mathematics. I
           specialize in front-end and UX/UI development. I hope to utilize this
           web app for more than portfolio use and have it reflect my interests,
-          my mindset, and more. 
+          my mindset, and more.
           <details>
-          <summary>I am...</summary>
-          <ul>
-            <li>An Aspiring Vegetarian</li>
-            <li>An Asexual 🏳️‍🌈 </li>
-            <li>A Lover of the Arts</li>
-            <li>An Animal Enthusiast</li>
-          </ul>
-        </details>
+            <summary>I am...</summary>
+            <ul>
+              <li>An Aspiring Vegan</li>
+              <li>An Asexual 🏳️‍🌈 </li>
+              <li>A Lover of the Arts</li>
+              <li>An Animal Enthusiast</li>
+            </ul>
+          </details>
         </div>
 
         <details>
           <summary>My Coursework</summary>
           <ul>
-            <li>An Aspiring Vegetarian</li>
-            <li>An Asexual 🏳️‍🌈 </li>
-            <li>A Lover of the Arts</li>
-            <li>An Animal Enthusiast</li>
+            {courses.map(course => <li>{course}</li>)}
           </ul>
         </details>
       </div>
