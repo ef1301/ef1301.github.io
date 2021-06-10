@@ -13,7 +13,7 @@ const Navbar = ({
 }) => {
   return (
     <nav>
-      <input id="nav-collapse" type="checkbox" defaultChecked={menuOpen} ></input>
+      <input id="nav-collapse" type="checkbox" onChange={e => {}} checked={menuOpen} ></input>
       <div id="links-collapse">
         <div className="closed">
           <label
