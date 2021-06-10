@@ -1,5 +1,5 @@
 [data-theme="dark"] {
-  --bg-color: #121212;
+  --bg-color: #152028;
   --subbg-color: #323f4b;
   --link-color: #e4e7eb;
   --text-color: #e4e7eb;
@@ -141,6 +141,15 @@ nav {
   margin: auto 5%;
 }
 
+details {
+  width: 100%;
+  background-color: var(--sec-color);
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out;
+}
+
 footer {
   width: 100%;
   padding: 2%;
@@ -156,6 +165,14 @@ footer {
     display: inline-block;
     width: 75%;
     color: var(--accent-color);
+  }
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+    &:hover {
+      color: var(--accent-color);
+    }
   }
 }
 

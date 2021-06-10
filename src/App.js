@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import "./styles/functional.scss";
 import "./styles/responsive.scss";
@@ -19,11 +19,11 @@ import Window from "./components/utils/window";
 function App() {
   const [darkMode, setDarkMode] = useState(false);
   const [japtrans, setJap] = useState(false);
-  const [menuCollapse, setCollapse] = useState(true);
+  const [menuOpen, setOpen] = useState(false);
 
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   const toggleJap = () => setJap(japtrans ? false : true);
-  const toggleCollapse = () => setCollapse(menuCollapse ? false : true);
+  const toggleMenu = (e) => setOpen(menuOpen ? false : true);
 
   const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
@@ -33,18 +33,18 @@ function App() {
   console.log(boxOutsideClick);*/
 
   return (
-    <div className="App" data-theme={darkMode ? "dark" : "light"}>
+    <div className="App" data-theme={darkMode ? "dark" : "light"} basename={process.env.PUBLIC_URL}>
       <Router basename={process.env.PUBLIC_URL}>
         <Header
           japtrans={japtrans}
           toggleJap={toggleJap}
-          toggleCollapse={toggleCollapse}
+          toggleCollapse={toggleMenu}
         />
         <Navbar
           japtrans={japtrans}
           toggleJap={toggleJap}
-          menuCollapse={menuCollapse}
-          toggleCollapse={toggleCollapse}
+          menuOpen={menuOpen}
+          toggleMenu={toggleMenu}
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
         />
@@ -62,7 +62,7 @@ function App() {
         toggleJap={toggleJap}
         darkMode={darkMode}
         toggleDarkMode={toggleDarkMode}
-         />
+        />
       </Router>
     </div>
   );

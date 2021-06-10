@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import pfp from "../assets/pfp.png";
 import "../../styles/about.scss";
 
-const About = React.forwardRef((props, ref) => {
+const About = () => {
+  const [animation, setAnimation] = useState(false);
+
+  const toggleAnimation= () => setAnimation(animation ? false : true);
   const courses = [
     "Advanced Programming Languages",
     "Computer Architecture",
@@ -19,7 +22,7 @@ const About = React.forwardRef((props, ref) => {
   ];
 
   return (
-    <div id="about" ref={ref}>
+    <div id="about" >
       <div id="about-bio">
         <img id="pfp" src={pfp} alt="Emily Fang"></img>
         <div id="bio">
@@ -43,12 +46,22 @@ const About = React.forwardRef((props, ref) => {
         <details>
           <summary>My Coursework</summary>
           <ul>
-            {courses.map(course => <li>{course}</li>)}
+            {courses.map((course, index) => (
+              <li key={`coursework${index}`}>{course}</li>
+            ))}
           </ul>
         </details>
       </div>
 
       <div id="cs-journey">
+        <div id="animate">
+          Animate
+          <br />
+          <label className="switch">
+            <input type="checkbox" />
+            <span className="slider" onClick={toggleAnimation}></span>
+          </label>
+        </div>
         <h3>Why I chose CS</h3>
         <section>
           <h4>My Life Before</h4>
@@ -111,6 +124,6 @@ const About = React.forwardRef((props, ref) => {
       </ul>
     </div>
   );
-});
+};
 
 export default About;

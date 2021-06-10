@@ -6,19 +6,19 @@ import NavLogo from "../assets/NavLogo.png";
 const Navbar = ({
   japtrans,
   toggleJap,
-  menuCollapse,
-  toggleCollapse,
+  menuOpen,
+  toggleMenu,
   darkMode,
   toggleDarkMode,
 }) => {
   return (
     <nav>
-      <input id="nav-collapse" type="checkbox" value={menuCollapse}></input>
+      <input id="nav-collapse" type="checkbox" defaultChecked={menuOpen} ></input>
       <div id="links-collapse">
         <div className="closed">
           <label
             htmlFor="nav-collapse"
-            onClick={toggleCollapse}
+            onClick={toggleMenu}
             id="close-nav-toggle"
           >
             Close
@@ -27,16 +27,16 @@ const Navbar = ({
 
         <ul id="nav-links">
           <img id="pfp" src={NavLogo} alt="Alt Logo"></img>
-          <Link to="/">
-            <li>{japtrans ? "ホームページ" : "Home"}</li>
+          <Link to="/" onClick={toggleMenu}>
+            <li >{japtrans ? "ホームページ" : "Home"}</li>
           </Link>
-          <Link to="/about">
+          <Link to="/about" onClick={toggleMenu}>
             <li>{japtrans ? "私について" : "About Me"}</li>
           </Link>
-          <Link to="/projects">
+          <Link to="/projects" onClick={toggleMenu}>
             <li>{japtrans ? "プロジェクト" : "Projects"}</li>
           </Link>
-          <Link to="/hobbies">
+          <Link to="/hobbies" onClick={toggleMenu}>
             <li>{japtrans ? "趣味" : "Hobbies"}</li>
           </Link>
         </ul>
@@ -53,7 +53,7 @@ const Navbar = ({
                 <br />
                 <input
                   className="toggle"
-                  onClick={toggleDarkMode}
+                  onClick={() => {toggleMenu(); toggleDarkMode();}}
                   id="dark-mode-toggle"
                   type="checkbox"
                 />

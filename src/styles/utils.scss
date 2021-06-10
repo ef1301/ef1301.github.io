@@ -151,9 +151,8 @@ input:checked + .slider:before {
 #close-nav-toggle {
   padding: 1rem;
   font-size: 1.5rem;
-  color: var(--accent-color);
-  &:hover::before {
-    content: "X";
+  color: var(--link-color);
+  &:hover {
     color: var(--accent-color);
   }
 }
