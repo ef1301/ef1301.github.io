@@ -1,6 +1,6 @@
 [data-theme="dark"] {
-  --bg-color: #152028;
-  --subbg-color: #323f4b;
+  --bg-color: rgb(21, 32, 40);
+  --subbg-color: rgba(36, 55, 68, 0.5);
   --link-color: #e4e7eb;
   --text-color: #e4e7eb;
   --accent-color: #ceccff;
@@ -42,6 +42,7 @@
 }
 
 header {
+  position: relative;
   padding: 1rem 2rem;
   width: 100%;
   margin-bottom: 2rem;
@@ -73,7 +74,7 @@ header {
 nav {
   background-color: var(--bg-color);
   height: 100%;
-  width: 25%;
+  width: 100%;
   z-index: 1;
 }
 
@@ -81,25 +82,37 @@ nav {
   display: none;
   & + #links-collapse,
   & + #side-bar {
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out;
     transform: translatex(-101%);
     background-color: var(--bg-color);
   }
   &:checked + #links-collapse,
+  &:checked + nav,
   & + #side-bar {
     transform: translatex(0%);
     background-color: var(--bg-color);
-    box-shadow: #1f2933 -0.1rem -0.2rem 0.75rem;
   }
 }
 
 #links-collapse {
   position: fixed;
   height: 100%;
-  width: 30%;
+  width: 100%;
   top: 0;
   left: 0;
-  background-color: var(--bg-color);
+  background: var(--bg-color) url("../components/assets/nav.gif") no-repeat fixed left;
+  #links {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    background-color: var(--bg-color);
+    box-shadow: #1f2933 -0.1rem -0.2rem 0.75rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+  }
 }
 
 #nav-links {
@@ -120,9 +133,14 @@ nav {
     font-size: 1.25em;
     text-decoration: none;
     background: none;
-    transition: all 0.5s ease-in-out;
-    &:hover, &:focus {
-      background-image: linear-gradient(to right,var(--accent-color),var(--subaccent-color));
+    transition: all 0.25s ease-in-out;
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(
+        to right,
+        var(--accent-color),
+        var(--subaccent-color)
+      );
     }
   }
 
@@ -143,11 +161,15 @@ nav {
 
 details {
   width: 100%;
-  background-color: var(--sec-color);
-}
-
-details[open] summary ~ * {
-  animation: sweep .5s ease-in-out;
+  margin: 2% 1%;
+  background-color: var(--subbg-color);
+  &[open] summary ~ * {
+    animation: sweep 0.5s ease-in-out;
+  }
+  summary {
+    padding: 1%;
+    background-color: var(--bg-color);
+  }
 }
 
 footer {

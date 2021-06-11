@@ -23,7 +23,14 @@ function App() {
 
   const toggleDarkMode = () => setDarkMode(darkMode ? false : true);
   const toggleJap = () => setJap(japtrans ? false : true);
-  const toggleMenu = (e) => setOpen(menuOpen ? false : true);
+  const toggleMenu = (e) => {
+    if (!menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "visible";
+    }
+    setOpen(menuOpen ? false : true);
+  };
 
   const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
@@ -33,7 +40,7 @@ function App() {
   console.log(boxOutsideClick);*/
 
   return (
-    <div className="App" data-theme={darkMode ? "dark" : "light"} basename={process.env.PUBLIC_URL}>
+    <div className="App" data-theme={darkMode ? "dark" : "light"} basename={process.env.PUBLIC_URL} >
       <Router basename={process.env.PUBLIC_URL}>
         <Header
           japtrans={japtrans}
