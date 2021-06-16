@@ -37,9 +37,9 @@ const Navbar = ({
             <Link to="/" onClick={toggleMenu}>
               <li>{japtrans ? "ホームページ" : "Home"}</li>
             </Link>
-            <Link to="/about" onClick={toggleMenu}>
+            {/*<Link to="/about" onClick={toggleMenu}>
               <li>{japtrans ? "私について" : "About Me"}</li>
-            </Link>
+</Link>*/}
             <Link to="/projects" onClick={toggleMenu}>
               <li>{japtrans ? "プロジェクト" : "Projects"}</li>
             </Link>

@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import pfp from "../assets/pfp.png";
 import "../../styles/about.scss";
 
-import AboutText from './AboutText';
-import AboutAnimation from './AboutAnimation';
+import AboutText from "./AboutText";
+import AboutAnimation from "./AboutAnimation";
 
 const About = () => {
-  const [animation, setAnimation] = useState(true);
+  const [animation, setAnimation] = useState(false);
 
-  const toggleAnimation= () => setAnimation(animation ? false : true);
+  const toggleAnimation = () => setAnimation(animation ? false : true);
   const courses = [
     "Advanced Programming Languages",
     "Computer Architecture",
@@ -25,9 +25,9 @@ const About = () => {
   ];
 
   return (
-    <div id="about" >
+    <div id="about">
       <div id="about-bio">
-        <img id="pfp" src={pfp} alt="Emily Fang"></img>
+        <img id="pfp" src={pfp} alt="My pfp"></img>
         <div id="bio">
           <h2>About Me, Emily Fang.</h2>
           My name is Emily Fang and I am an undergraduate attending Hunter
@@ -45,28 +45,22 @@ const About = () => {
             </ul>
           </details>
         </div>
-
-        <details>
-          <summary>My Coursework</summary>
-          <ul>
-            {courses.map((course, index) => (
-              <li key={`coursework${index}`}>{course}</li>
-            ))}
-          </ul>
-        </details>
       </div>
 
-      <div id="cs-journey">
-        <div id="animate">
+      <div id="story">
+        <div className="header">
           Animate
           <br />
           <label className="switch">
             <input type="checkbox" />
             <span className="slider" onClick={toggleAnimation}></span>
           </label>
-          {animation ? <AboutAnimation/> : <AboutText/> }
         </div>
-        
+
+        {animation ? <AboutAnimation /> : <AboutText />}
+      </div>
+
+      <div id="cs-journey">
         <section>
           <h3>What I love about CS</h3>
           <ul>
@@ -78,14 +72,16 @@ const About = () => {
             <li>How Interesting it is</li>
             <li>How There is Always Something New to Learn</li>
           </ul>
+          <details>
+          <summary>My Coursework</summary>
+          <ul>
+            {courses.map((course, index) => (
+              <li key={`coursework${index}`}>{course}</li>
+            ))}
+          </ul>
+        </details>
         </section>
       </div>
-
-      <h2>Other Nonsensical Details</h2>
-      <ul>
-        <li>ENFP</li>
-        <li></li>
-      </ul>
     </div>
   );
 };

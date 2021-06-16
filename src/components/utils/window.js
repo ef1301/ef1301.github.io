@@ -35,12 +35,6 @@ class Window extends Component {
                 <div className="thumb"></div>
             </div>
             <Carousel/>
-            <div id="espose">
-                <p>1</p>
-                <p>1</p>
-                <p></p>
-                <p></p>	
-            </div>
         </div>
         );
     }

@@ -10,7 +10,6 @@ import About from "./components/containers/About.js";
 import Hobbies from "./components/containers/Hobbies.js";
 import WorkingOnIt from "./components/containers/WorkingOnIt.js";
 import { Header, Navbar, Footer } from "./components/functionalComponents";
-import Window from "./components/utils/window";
 
 //import { OutsideClick } from "./components/utils/basic-utils";
 
@@ -57,8 +56,8 @@ function App() {
         />
         <div id="page-body">
           <Switch>
-            <Route exact path="/" render={() => <Window />} />
-            <Route exact path="/about" component={About} />
+            <Route exact path="/" component={About} />
+            {/*<Route exact path="/about" component={About} />*/}
             <Route exact path="/hobbies" component={Hobbies} />
             <Route exact path="/projects" component={WorkingOnItComponent} />
             <Route exact path="/contact" component={WorkingOnItComponent} />

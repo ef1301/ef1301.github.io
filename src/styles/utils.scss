@@ -14,14 +14,13 @@
     font-size: 1.5em;
     font-family: Playball;
   }
-}
-
-#utils {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  margin: 5% 0;
+  #utils {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin: 5% 0;
+  }
 }
 
 #pfp {
@@ -105,8 +104,6 @@
   background-color: #3f3f3f;
   -webkit-transition: 0.4s;
   transition: 0.4s;
-  &:hover {
-  }
   &::before {
     position: absolute;
     content: "";
@@ -205,6 +202,12 @@ footer .lines {
     animation-delay: 0.5s;
   }
   &:nth-child(3):after {
+    background: linear-gradient(
+      to right,
+      var(--header-bottom) 0%,
+      #30A395 75%,
+      #44D8C6 100%
+    );
     animation-delay: 2s;
   }
 }

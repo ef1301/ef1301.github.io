@@ -1,13 +1,11 @@
 [data-theme="dark"] {
   --bg-color: rgb(21, 32, 40);
   --subbg-color: rgba(36, 55, 68, 0.5);
+  --sub-color: #222222;
   --link-color: #e4e7eb;
   --text-color: #e4e7eb;
   --accent-color: #ceccff;
   --subaccent-color: #9794ff;
-  --sec-color: #3e4c59;
-  --header-bottom: rgba(255, 255, 255, 0.1);
-  --contrast: white;
 }
 
 [data-theme="light"] {
@@ -17,8 +15,8 @@
   --text-color: black;
   --accent-color: #fa4a4a;
   --subaccent-color: #9e2424;
-  --header-color: #900404;
-  --header-bottom: rgba(1, 1, 1, 0.1);
+  --emphasis-color: #44D8C6;
+  --subemphasis-color: #30A395;
 }
 
 #logo {
@@ -155,8 +153,6 @@ nav {
 
 #page-body {
   width: 100%;
-  padding: 1%;
-  margin: auto 5%;
 }
 
 details {
@@ -169,6 +165,11 @@ details {
   summary {
     padding: 1%;
     background-color: var(--bg-color);
+    cursor: pointer;
+    & > * {
+      display: inline;
+    }
+    
   }
 }
 

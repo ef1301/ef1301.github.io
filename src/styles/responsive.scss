@@ -9,6 +9,11 @@
 }
 
 @media screen and (max-width: 800px) {
+  nav {
+    a:-webkit-any-link {
+      font-size: 1rem;
+    }
+  }
   #nav-collapse {
     & + #links-collapse,
     & + #side-bar {
@@ -22,30 +27,59 @@
     }
     #links {
       width: 100%;
+      font-size: 1rem;
     }
   }
+
+
   header {
     h1 {
       font-size: 1.5rem;
     }
-  }
-
+    
   #side-header {
     padding: 0;
     margin: 0;
   }
+  }
+
 
   .hamburger {
     height: 1rem;
     width: 1.25rem;
-  }
-
-  .hamburger__icon {
-    width: 100%;
+    .hamburger__icon {
+      width: 100%;
+    }
   }
 
   #links {
     width: 100vw;
+  }
+
+  #about {
+    font-size: 1rem;
+    #about-bio {
+      width: 100%;
+      flex-flow: column wrap;
+      justify-content: center;
+      #bio {
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        margin: 0;
+        details {
+          text-align: left;
+        }
+      }
+    }
+    section {
+
+    }
+  }
+
+  #page-body {
+    width: 100%;
+    padding: 0%;
   }
 
   footer {

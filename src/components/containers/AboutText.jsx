@@ -1,6 +1,6 @@
 const AboutText = () => {
     return(
-        <>
+        <div id="about-text">
         <h3>Why I chose CS</h3>
         <section>
           <h4>My Life Before</h4>
@@ -42,7 +42,7 @@ const AboutText = () => {
           </p>
         </section>
 
-        </>
+        </div>
     );
 };
 

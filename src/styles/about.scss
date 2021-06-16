@@ -1,19 +1,75 @@
+#about {
+  section {
+    width: 90%;
+    padding: 3% 2%;
+  }
+}
+
 #about-bio {
   width: 90%;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  background-color: var(--subbg-color);
+  margin: auto;
+  padding: 2%;
   #pfp {
-    width: 20%;
-    height: 20%;
     padding: 5%;
   }
 }
 
 #bio {
   width: 70%;
-  details,
   summary {
+    padding-left: 2rem;
+    background-color: var(--accent-color);
+    color: var(--bg-color);
     margin: 3% auto;
   }
+  details {
+    margin: 3% auto;
+    background-color: var(--bg-color);
+    &[open] {
+      padding-bottom: 2%;
+    }
+  }
+}
+
+#story {
+  width: 100%;
+  display: inline;
+  section {
+    text-align: left;
+    width: 95%;
+    background-color: var(--subbg-color);
+    padding: 2%;
+    margin: 2% auto;
+    color: var(--text-color);
+  }
+  #about-text {
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    background-color: var(--subbg-color);
+    padding: 2%;
+  }
+  .header {
+    width: 95%;
+    padding: 2%;
+    text-align: right;
+  }
+  #animation {
+    padding: 2%;
+    outline: .1rem solid var(--subaccent-color);
+    background-color: var(--subbg-color);
+    text-align: center;
+    h2 {
+      color: var(--accent-color);
+    }
+  }
+}
+
+#cs-journey {
+  width: 95%;
+  margin: auto;
 }
