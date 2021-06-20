@@ -202,12 +202,6 @@ footer .lines {
     animation-delay: 0.5s;
   }
   &:nth-child(3):after {
-    background: linear-gradient(
-      to right,
-      var(--header-bottom) 0%,
-      #30A395 75%,
-      #44D8C6 100%
-    );
     animation-delay: 2s;
   }
 }

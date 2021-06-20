@@ -8,6 +8,7 @@ import "./styles/utils.scss";
 //Components
 import About from "./components/containers/About.js";
 import Hobbies from "./components/containers/Hobbies.js";
+import Projects from "./components/containers/Projects";
 import WorkingOnIt from "./components/containers/WorkingOnIt.js";
 import { Header, Navbar, Footer } from "./components/functionalComponents";
 
@@ -59,7 +60,7 @@ function App() {
             <Route exact path="/" component={About} />
             {/*<Route exact path="/about" component={About} />*/}
             <Route exact path="/hobbies" component={Hobbies} />
-            <Route exact path="/projects" component={WorkingOnItComponent} />
+            <Route exact path="/projects" component={Projects} />
             <Route exact path="/contact" component={WorkingOnItComponent} />
           </Switch>
         </div>

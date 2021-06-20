@@ -29,7 +29,7 @@ const About = () => {
       <div id="about-bio">
         <img id="pfp" src={pfp} alt="My pfp"></img>
         <div id="bio">
-          <h2>About Me, Emily Fang.</h2>
+          <h2>About Me, Emily Fang. (<a href="https://github.com/ef1301/">@ef1301</a>)</h2>
           My name is Emily Fang and I am an undergraduate attending Hunter
           College. I major in Computer Science and minor in Mathematics. I
           specialize in front-end and UX/UI development. I hope to utilize this
@@ -38,8 +38,8 @@ const About = () => {
           <details>
             <summary>I am...</summary>
             <ul>
-              <li>An Aspiring Vegan</li>
-              <li>An Asexual 🏳️‍🌈 </li>
+              <li>An Aspiring Vegan ( <a>Why are you only aspiring? 🤔</a> )</li>
+              <li>An Asexual 🏳️‍🌈</li>
               <li>A Lover of the Arts</li>
               <li>An Animal Enthusiast</li>
             </ul>

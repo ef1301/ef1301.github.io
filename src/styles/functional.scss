@@ -6,15 +6,20 @@
   --text-color: #e4e7eb;
   --accent-color: #ceccff;
   --subaccent-color: #9794ff;
+  --header-bottom: rgba(255, 255, 255, 0.1);
+  --emphasis-color: #44D8C6;
+  --subemphasis-color: #30A395; 
 }
 
 [data-theme="light"] {
   --bg-color: white;
   --subbg-color: #f5f5f5;
-  --link-color: black;
+  --link-color: #30A395;
   --text-color: black;
   --accent-color: #fa4a4a;
   --subaccent-color: #9e2424;
+  --header-color: #900404;
+  --header-bottom: rgba(1, 1, 1, 0.1);
   --emphasis-color: #44D8C6;
   --subemphasis-color: #30A395;
 }
@@ -127,7 +132,7 @@ nav {
   a:-webkit-any-link {
     width: 100%;
     text-align: center;
-    color: var(--link-color);
+    color: var(--text-color);
     font-size: 1.25em;
     text-decoration: none;
     background: none;
