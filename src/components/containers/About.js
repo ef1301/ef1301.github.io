@@ -38,7 +38,7 @@ const About = () => {
           <details>
             <summary>I am...</summary>
             <ul>
-              <li>An Aspiring Vegan ( <a>Why are you only aspiring? 🤔</a> )</li>
+              <li>An Aspiring Vegan ( <a href="#0">Why are you only aspiring? 🤔</a> )</li>
               <li>An Asexual 🏳️‍🌈</li>
               <li>A Lover of the Arts</li>
               <li>An Animal Enthusiast</li>

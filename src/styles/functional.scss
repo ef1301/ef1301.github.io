@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap";
+
 [data-theme="dark"] {
   --bg-color: rgb(21, 32, 40);
   --subbg-color: rgba(36, 55, 68, 0.5);
@@ -60,6 +62,7 @@ header {
     text-decoration: none;
     &:hover {
       text-shadow: 0.1rem 0.1rem 0.05em var(--subaccent-color);
+      text-decoration: none;
     }
   }
   &:li,

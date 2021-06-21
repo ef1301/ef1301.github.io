@@ -1,8 +1,10 @@
 import React, {useState} from "react";
+import SingleProject from "./Project";
+import allProjects from "../utils/projects-list";
 
 const Projects = () => {
     const project_types = ["All", "Coding", "Design", "Art", "Crafting", "Building", "Photography"];
-    const allProjects = require("../utils/projects-list");
+    //const allProjects = require("../utils/projects-list");
     const [filter,setFilter] = useState("All");
     const [currentProjects, setCurrentProjects] = useState(allProjects);
     const handleFilter = (e) => {
@@ -13,10 +15,10 @@ const Projects = () => {
     return (
         <div id="projects">
             <select value={filter} onChange={handleFilter}>
-                {project_types.map((type) => <option value={type}>{type}</option>)}
+                {project_types.map((type) => <option key={type} value={type}>{type}</option>)}
             </select>
             <div className="container">
-                {currentProjects.map((proj) => <p>{proj.name}</p>)}
+                {currentProjects ? currentProjects.map((proj) => <SingleProject key={proj.name} proj={proj} />) : <></>}
             </div>
         </div>
     );
