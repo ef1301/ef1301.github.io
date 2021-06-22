@@ -1,4 +1,5 @@
 import Carousel from "react-bootstrap/Carousel";
+import Badge from 'react-bootstrap/Badge'
 
 const SingleProject = (props) => {
   const project = props.proj;
@@ -8,13 +9,13 @@ const SingleProject = (props) => {
         {project.name} - #{project.type}
       </h2>
       <div className="details">
-        {project.description}
-        <a href={project.link}>Link</a>
-        <ul>
+        {project.description} <br/>
+        <a href={project.link} >{`	☆*:.｡.Project Link for ${project.name}.｡.:*☆`}</a>
+        <div>
           {project.tags
-            ? project.tags.map((tag, index) => <li key={index}>{tag}</li>)
+            ? project.tags.map((tag, index) => <Badge pill variant="dark" key={index}>{tag}</Badge>)
             : null}
-        </ul>
+        </div>
         <Carousel>
           {project.images
           ? project.images.map((img, index) => 
@@ -22,7 +23,7 @@ const SingleProject = (props) => {
           <img
             className="d-block w-100"
             src={img}
-            alt="First slide"
+            alt={`${project.name} slide${index}`}
           />
         </Carousel.Item>)
           : null}

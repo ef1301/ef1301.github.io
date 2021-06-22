@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/functional.scss";
 import "./styles/responsive.scss";
 import "./styles/animation.scss";
