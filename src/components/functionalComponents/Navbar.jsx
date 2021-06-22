@@ -46,6 +46,9 @@ const Navbar = ({
             <Link to="/hobbies" onClick={toggleMenu}>
               <li>{japtrans ? "趣味" : "Hobbies"}</li>
             </Link>
+            <Link to="/comingsoon" onClick={toggleMenu}>
+              <li>{japtrans ? "冒険が待っている ( 近日配信 )" : "New Adventure (Coming Soon)"}</li>
+            </Link>
           </ul>
 
           <div id="side-bar">

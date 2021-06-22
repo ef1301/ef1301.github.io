@@ -4,18 +4,24 @@ import Badge from 'react-bootstrap/Badge'
 const SingleProject = (props) => {
   const project = props.proj;
   return (
-    <section className="project-card">
+    <div className="project-card" >
+      <div className="project-card-inner">
+      <div className="front">
       <h2>
         {project.name} - #{project.type}
       </h2>
-      <div className="details">
         {project.description} <br/>
-        <a href={project.link} >{`	☆*:.｡.Project Link for ${project.name}.｡.:*☆`}</a>
+        {/*project.images
+          ? project.images.map((img, index) => <img src={img} key={index} />)
+        : null*/}
         <div>
           {project.tags
-            ? project.tags.map((tag, index) => <Badge pill variant="dark" key={index}>{tag}</Badge>)
+            ? project.tags.map((tag, index) => <Badge pill key={index}>{tag}</Badge>)
             : null}
         </div>
+      </div>
+      <div className="back">
+        {project.images.length > 0 ?         
         <Carousel>
           {project.images
           ? project.images.map((img, index) => 
@@ -27,12 +33,13 @@ const SingleProject = (props) => {
           />
         </Carousel.Item>)
           : null}
-        </Carousel>
-        {/*project.images
-          ? project.images.map((img, index) => <img src={img} key={index} />)
-        : null*/}
+          </Carousel> : <></>
+        }
+
+        <a href={project.link} ><button>{`☆*:.｡.Project Link for ${project.name}.｡.:*☆`}</button></a>
       </div>
-    </section>
+      </div>
+    </div>
   );
 };
 

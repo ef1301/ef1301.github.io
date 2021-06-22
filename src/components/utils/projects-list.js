@@ -6,7 +6,7 @@ const allProjects = [
     type: "Coding",
     link: "https://github.com/ef1301/DotPolitics",
     description:
-      "DotPolitics is a useful tool to look up elected representatives across the United States based on location. Having the means to educate yourself and seek out representative information in a centralized manner is vital for change. We provide basic information and links to each representative's social media(s) and contact information, using the Google Civics Information API.",
+      "DotPolitics is a useful tool to look up elected representatives across the United States based on location. We provide basic information and links to each representative's social media(s) and contact information, using the Google Civics Information API.",
     tags: [
       "Hunter College",
       "React",
@@ -47,9 +47,9 @@ const allProjects = [
     name: "Daedalus Logo",
     type: "Design",
     link: "",
-    description: "",
+    description: "In an effort to update the Hunter College Daedalus Honors Logo, this logo was designed to encapsulate the Greek origins and inspirations from the original.",
     tags: ["Hunter Collge", "Daedalus Honors", "Krita"],
-    images: []
+    images: [projectImages.daedalus]
   },
   {
     name: "Birthday Gift",
@@ -57,8 +57,8 @@ const allProjects = [
     link: "",
     description:
       "For a really good friend of mine, I made a smaller verson of the wooden watercolor books with hand-drawings. The pages included various art pieces with song lyrics that reminded me of our relationship together.",
-    tag: ["Laser Cutting", "Book Binding", "Watercolor", "Ink", "Hand-drawn"],
-    images: [],
+    tags: ["Laser Cutting", "Book Binding", "Watercolor", "Ink", "Hand-drawn"],
+    images: projectImages.bdaygift,
   },
   {
     name: "Wooden Watercolor Books",
@@ -72,7 +72,7 @@ const allProjects = [
   {
     name: "Flatpack Stool & Table",
     type: "Building",
-    link: "",
+    link: "https://drive.google.com/file/d/1HsbzGccLF8i6ugOmccayKQsiXXQWCRja/view?usp=sharing",
     description: "",
     tags: ["Woodworking", "AutoCAD", "Drafting & Design", "Sewing"],
     images: [],
@@ -80,11 +80,11 @@ const allProjects = [
   {
     name: "Breadbox Desktop Organizer",
     type: "Building",
-    link: "",
+    link: "https://drive.google.com/file/d/1fDoT90kC1r7hwUNjRNn8WQzV8AJViIsr/view?usp=sharing",
     description:
       "A desktop organizer inspired and based around breadbox functionalities to allow for easy access and a beautiful treasure chest-like design. With the intentions of sparking joy without the expense of convenience and wasted desk space.",
     tags: ["Woodworking", "AutoCAD", "Drafting & Design"],
-    images: [],
+    images: projectImages.breadbox,
   },
   {
     name: "Alexithymia",
@@ -92,7 +92,8 @@ const allProjects = [
     link: "",
     description:
       "While on a stroll along Brooklyn's Caesar's Bay, I came across this beautiful sunset blended into soft clouds. At the same time, a fisherman was looking out into the same view as I was. Without knowing this person, I felt that we were connected by this one view. A warm but indescribable feeling.",
-    images: [],
+    tags: ["Photography"],
+      images: [projectImages.alexithymia],
   },
 ];
 

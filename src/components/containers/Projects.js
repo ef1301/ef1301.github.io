@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SingleProject from "./Project";
 import allProjects from "../utils/projects-list";
+import "../../styles/projects.scss";
 
 const Projects = () => {
   const project_types = [
@@ -22,12 +23,14 @@ const Projects = () => {
         setCurrentProjects(
             allProjects.filter((obj) => obj.type === e.target.value)
           );
-    }
-
+  }
   };
+
   return (
     <div id="projects">
-      <label for="projects-filter">Filter: </label>
+            <h1 className="neonText">Projects</h1>
+      <div className="filter">
+      <label htmlFor="projects-filter">Filter: </label>
       <select
         id="projects-filter"
         name="projects_filter"
@@ -40,15 +43,19 @@ const Projects = () => {
           </option>
         ))}
       </select>
+      </div>
+
 
       <div className="container">
-        {currentProjects ? (
+        {currentProjects && (currentProjects.length > 0 ? (
           currentProjects.map((proj) => (
             <SingleProject key={proj.name} proj={proj} />
           ))
         ) : (
-          <>No Projects.</>
-        )}
+          <section>
+            <h2>Sorry! There appears to be no projects under the '{filter}' filter.</h2>
+            </section>
+        ))}
       </div>
     </div>
   );
