@@ -11,17 +11,17 @@ const SingleProject = (props) => {
         {project.name} - #{project.type}
       </h2>
         {project.description} <br/>
-        {/*project.images
-          ? project.images.map((img, index) => <img src={img} key={index} />)
-        : null*/}
-        <div>
+        {project.images
+          ? <img src={project.images[0]} alt={project.name} />
+        : null}
+        <div className="tags">
           {project.tags
             ? project.tags.map((tag, index) => <Badge pill key={index}>{tag}</Badge>)
             : null}
         </div>
       </div>
       <div className="back">
-        {project.images.length > 0 ?         
+        {project.images.length > 1 ?         
         <Carousel>
           {project.images
           ? project.images.map((img, index) => 
@@ -33,10 +33,10 @@ const SingleProject = (props) => {
           />
         </Carousel.Item>)
           : null}
-          </Carousel> : <></>
-        }
+          </Carousel> : (project.images.length === 1 ? <img src={project.images[0]} alt={project.name}></img> : null)}
+        
 
-        <a href={project.link} ><button>{`☆*:.｡.Project Link for ${project.name}.｡.:*☆`}</button></a>
+        {project.link ? <a href={project.link} ><button>{`☆*:.｡.Project Link for ${project.name}.｡.:*☆`}</button></a> : null}
       </div>
       </div>
     </div>

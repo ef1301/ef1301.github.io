@@ -59,7 +59,7 @@ const Navbar = ({
                   <br />
                   <label className="switch">
                     <input type="checkbox" />
-                    <span className="slider" onClick={toggleJap}></span>
+                    <span className="slider" onClick={() => {toggleJap(); toggleMenu();}}></span>
                   </label>
                 </div>
                 <div id="dark-mode">
@@ -71,9 +71,8 @@ const Navbar = ({
                   <br />
                   <input
                     className="toggle"
-                    onClick={toggleDarkMode}
+                    onClick={() => {toggleDarkMode(); toggleMenu();}}
                     checked={darkMode}
-                    onChange={(e) => {}}
                     id="dark-mode-toggle"
                     type="checkbox"
                   />

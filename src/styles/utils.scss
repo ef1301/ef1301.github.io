@@ -206,8 +206,8 @@ footer .lines {
   }
 }
 
-.carousel.slide {
-  a {
-    color: var(--link-color);
-  }
+#to-the-top {
+  position: fixed;
+  right: 3rem;
+  bottom: 8rem;
 }

@@ -3,6 +3,8 @@ import SingleProject from "./Project";
 import allProjects from "../utils/projects-list";
 import "../../styles/projects.scss";
 
+const scrollToTop = () => window.scrollTo(0, 0);
+
 const Projects = () => {
   const project_types = [
     "All",
@@ -28,7 +30,7 @@ const Projects = () => {
 
   return (
     <div id="projects">
-            <h1 className="neonText">Projects</h1>
+      <h1 className="neonText">Projects</h1>
       <div className="filter">
       <label htmlFor="projects-filter">Filter: </label>
       <select
@@ -45,6 +47,7 @@ const Projects = () => {
       </select>
       </div>
 
+      <button onClick={scrollToTop} id="to-the-top">🠕 To the Top!</button>
 
       <div className="container">
         {currentProjects && (currentProjects.length > 0 ? (

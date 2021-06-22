@@ -72,8 +72,7 @@ header {
     color: var(--text-color);
     text-decoration: none;
     &:hover {
-      text-shadow: 0.1rem 0.1rem 0.05em var(--subaccent-color);
-      text-decoration: none;
+      text-shadow: 0.1rem 0.1rem 1rem var(--emphasis-color), -0.1rem -0.1rem 1rem khaki;
     }
   }
   &:li,

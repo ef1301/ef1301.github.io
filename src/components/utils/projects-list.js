@@ -46,7 +46,7 @@ const allProjects = [
   {
     name: "Daedalus Logo",
     type: "Design",
-    link: "",
+    link: "https://drive.google.com/drive/folders/1BSAGWtZTVPXIJdnLAca2ZSlISU1YUSVk?usp=sharing",
     description: "In an effort to update the Hunter College Daedalus Honors Logo, this logo was designed to encapsulate the Greek origins and inspirations from the original.",
     tags: ["Hunter Collge", "Daedalus Honors", "Krita"],
     images: [projectImages.daedalus]
@@ -54,7 +54,6 @@ const allProjects = [
   {
     name: "Birthday Gift",
     type: "Crafting",
-    link: "",
     description:
       "For a really good friend of mine, I made a smaller verson of the wooden watercolor books with hand-drawings. The pages included various art pieces with song lyrics that reminded me of our relationship together.",
     tags: ["Laser Cutting", "Book Binding", "Watercolor", "Ink", "Hand-drawn"],
@@ -63,7 +62,6 @@ const allProjects = [
   {
     name: "Wooden Watercolor Books",
     type: "Crafting",
-    link: "",
     description:
       "Laser cut, engraved, and painted book covers and spines with a hand-sewn and hand-glued paper block using cold-pressed watercolor paper.",
     tags: ["Laser Cutting", "Book Binding"],
@@ -73,23 +71,22 @@ const allProjects = [
     name: "Flatpack Stool & Table",
     type: "Building",
     link: "https://drive.google.com/file/d/1HsbzGccLF8i6ugOmccayKQsiXXQWCRja/view?usp=sharing",
-    description: "",
-    tags: ["Woodworking", "AutoCAD", "Drafting & Design", "Sewing"],
-    images: [],
+    description: "Given a half sheet of plywood, students were challenged to design furniture inspired by IKEA's flatpack furniture series, meaning that the project's assembly should not require screws, nails, glue, or any other materials to hold the piece together.",
+    tags: ["Woodworking", "AutoCAD", "Drafting & Design", "Sewing", "IKEA Flatpack Challenge"],
+    images: projectImages.flatpack,
   },
   {
     name: "Breadbox Desktop Organizer",
     type: "Building",
     link: "https://drive.google.com/file/d/1fDoT90kC1r7hwUNjRNn8WQzV8AJViIsr/view?usp=sharing",
     description:
-      "A desktop organizer inspired and based around breadbox functionalities to allow for easy access and a beautiful treasure chest-like design. With the intentions of sparking joy without the expense of convenience and wasted desk space.",
-    tags: ["Woodworking", "AutoCAD", "Drafting & Design"],
+      "A desktop organizer inspired and based around breadbox functionalities to allow for easy access with the addition of a beautiful treasure chest-like design. With the intentions of sparking joy without the expense of convenience and wasted desk space.",
+    tags: ["Woodworking", "AutoCAD", "Drafting & Design", "Desktop Organizer"],
     images: projectImages.breadbox,
   },
   {
     name: "Alexithymia",
     type: "Photography",
-    link: "",
     description:
       "While on a stroll along Brooklyn's Caesar's Bay, I came across this beautiful sunset blended into soft clouds. At the same time, a fisherman was looking out into the same view as I was. Without knowing this person, I felt that we were connected by this one view. A warm but indescribable feeling.",
     tags: ["Photography"],
