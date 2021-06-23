@@ -21,16 +21,8 @@ const Navbar = ({
         checked={menuOpen}
       ></input>
       <div id="links-collapse">
+        <h2>My current wallpaper</h2>
         <div id="links">
-          {/*<div className="closed">
-            <label
-              htmlFor="nav-collapse"
-              onClick={toggleMenu}
-              id="close-nav-toggle"
-            >
-              Close
-            </label>
-  </div>*/}
 
           <ul id="nav-links">
             <img id="pfp" src={NavLogo} alt="Alt Logo"></img>
