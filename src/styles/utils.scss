@@ -202,19 +202,18 @@ footer .lines {
   }
 }
 
-#to-the-top {
-  position: fixed;
-  right: 3rem;
-  bottom: 8rem;
-  background: none;
-}
-
 .smooth-image {
+  margin: 0;
+  padding: 0;
   transition: opacity 1s;
 }
 .image-visible {
+  margin: 0;
+  padding: 0;
   opacity: 1;
 }
 .image-hidden {
+  margin: 0;
+  padding: 0;
   opacity: 0;
 }

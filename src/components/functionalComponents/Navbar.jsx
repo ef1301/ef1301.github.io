@@ -21,7 +21,7 @@ const Navbar = ({
         checked={menuOpen}
       ></input>
       <div id="links-collapse">
-        <h2>My current wallpaper</h2>
+        <h2>{japtrans ? "私のデスクトップの壁紙" : "My current wallpaper"}</h2>
         <div id="links">
 
           <ul id="nav-links">
@@ -63,7 +63,8 @@ const Navbar = ({
                   <br />
                   <input
                     className="toggle"
-                    onClick={() => {toggleDarkMode(); toggleMenu();}}
+                    onClick={() => {toggleDarkMode();}}
+                    onChange={(e) => {}}
                     checked={darkMode}
                     id="dark-mode-toggle"
                     type="checkbox"

@@ -34,6 +34,7 @@ function App() {
     setOpen(menuOpen ? false : true);
   };
 
+  const AboutComponent = () => <About japtrans={japtrans} />;
   const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
   useEffect(() => {
@@ -59,7 +60,7 @@ function App() {
         />
         <div id="page-body">
           <Switch>
-            <Route exact path="/" component={About} />
+            <Route exact path="/" component={AboutComponent} />
             {/*<Route exact path="/about" component={About} />*/}
             <Route exact path="/hobbies" component={Hobbies} />
             <Route exact path="/projects" component={Projects} />

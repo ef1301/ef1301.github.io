@@ -54,6 +54,9 @@ a:-webkit-any-link {
       height: 2.5rem;
       width: auto;
     }
+    &:hover {      
+      text-shadow: 0 0 10px khaki, 0 0 40px khaki, 0 0 80px khaki;
+    }
   }
 }
 
@@ -72,8 +75,7 @@ header {
     color: var(--text-color);
     text-decoration: none;
     &:hover {
-      text-shadow: 0.1rem 0.1rem 1rem var(--emphasis-color),
-        -0.1rem -0.1rem 1rem khaki;
+      color: var(--emphasis-color);
     }
   }
   &:li,
@@ -158,7 +160,7 @@ nav {
     font-size: 1.25em;
     text-decoration: none;
     background: none;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.1s ease-in-out;
     &:hover,
     &:focus {
       text-shadow: -0.2rem 0.2rem 0.5rem var(--link-color);
@@ -208,6 +210,7 @@ footer {
   padding: 2%;
   text-align: right;
   color: var(--text-color);
+  position: relative;
   #side-footer {
     display: inline-flex;
     flex-flow: row wrap;
@@ -225,6 +228,16 @@ footer {
     font-weight: bold;
     &:hover {
       color: var(--accent-color);
+    }
+  }
+  #to-the-top {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    background-color: var(--accent-color);
+    transition: all .2s ease-in-out;
+    &:hover {
+      box-shadow: 0 0 10px khaki, 0 0 40px khaki, 0 0 80px khaki;
     }
   }
 }

@@ -65,7 +65,7 @@ const allProjects = [
     description:
       "Laser cut, engraved, and painted book covers and spines with a hand-sewn and hand-glued paper block using cold-pressed watercolor paper.",
     tags: ["Laser Cutting", "Book Binding"],
-    images: [],
+    images: projectImages.woodbooks,
   },
   {
     name: "Flatpack Stool & Table",

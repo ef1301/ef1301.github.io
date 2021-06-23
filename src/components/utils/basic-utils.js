@@ -1,26 +1,8 @@
-import { useEffect, useState } from 'react';
 import mojs from "@mojs/core";
 
-export function OutsideClick(ref) {
-  const [isClicked, setIsClicked] = useState();
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (ref.current && !ref.current.contains(event.target)) {
-        setIsClicked(true);
-      } else {
-        setIsClicked(false);
-      }
-    }
-  
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [ref]);
-    return isClicked;
-  }
+export const scrollToTop = () => window.scrollTo(0, 0);
 
-export function hamburgerLines(e) {
+export function buttonLines(e) {
   const itemDim = e.target.getBoundingClientRect(),
         itemSize = {
           x: itemDim.right - itemDim.left,

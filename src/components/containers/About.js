@@ -7,7 +7,7 @@ import RenderSmoothImage from "../utils/smooth-image-render";
 import AboutText from "./AboutText";
 import AboutAnimation from "./AboutAnimation";
 
-const About = () => {
+const About = ({japtrans}) => {
   const [animation, setAnimation] = useState(false);
 
   const toggleAnimation = () => setAnimation(animation ? false : true);
@@ -32,7 +32,7 @@ const About = () => {
         {/*<img id="pfp" src={pfp} alt="My pfp"></img>*/}
         <RenderSmoothImage src={pfp} alt={"My pfp"} id="pfp" />
         <div id="bio">
-          <h2>About Me, Emily Fang. (<a href="https://github.com/ef1301/">@ef1301</a>)</h2>
+          <h2>{japtrans ? "私について." : "About Me, Emily Fang."} (<a href="https://github.com/ef1301/">@ef1301</a>)</h2>
           My name is Emily Fang and I am an undergraduate attending Hunter
           College. I major in Computer Science and minor in Mathematics. I
           specialize in front-end and UX/UI development. I hope to utilize this

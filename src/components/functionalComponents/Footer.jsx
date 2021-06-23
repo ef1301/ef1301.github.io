@@ -1,4 +1,5 @@
 import React from "react";
+import { scrollToTop } from "../utils/basic-utils";
 import PDF from "../assets/Resume.pdf";
 
 const Footer = ({ japtrans }) => {
@@ -9,7 +10,9 @@ const Footer = ({ japtrans }) => {
         <div className="line"></div>
         <div className="line"></div>
       </div>
-
+      <button onClick={scrollToTop} id="to-the-top">
+        🠕 To the Top!
+      </button>
       <div id="side-footer">
         <p>
         <a href={PDF} target="_blank" rel="noreferrer">
