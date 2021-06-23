@@ -31,10 +31,6 @@
   border-radius: 50%;
 }
 
-#nav-links #pfp {
-  margin-bottom: 15%;
-}
-
 .toggle {
   --size: 2rem;
   --ray-size: calc(var(--size) * -0.4);
@@ -210,4 +206,15 @@ footer .lines {
   position: fixed;
   right: 3rem;
   bottom: 8rem;
+  background: none;
+}
+
+.smooth-image {
+  transition: opacity 1s;
+}
+.image-visible {
+  opacity: 1;
+}
+.image-hidden {
+  opacity: 0;
 }

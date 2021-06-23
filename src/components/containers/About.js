@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 import pfp from "../assets/pfp.png";
 import "../../styles/about.scss";
+import RenderSmoothImage from "../utils/smooth-image-render";
 
 import AboutText from "./AboutText";
 import AboutAnimation from "./AboutAnimation";
@@ -27,18 +29,19 @@ const About = () => {
   return (
     <div id="about">
       <div id="about-bio">
-        <img id="pfp" src={pfp} alt="My pfp"></img>
+        {/*<img id="pfp" src={pfp} alt="My pfp"></img>*/}
+        <RenderSmoothImage src={pfp} alt={"My pfp"} id="pfp" />
         <div id="bio">
           <h2>About Me, Emily Fang. (<a href="https://github.com/ef1301/">@ef1301</a>)</h2>
           My name is Emily Fang and I am an undergraduate attending Hunter
           College. I major in Computer Science and minor in Mathematics. I
           specialize in front-end and UX/UI development. I hope to utilize this
           web app for more than portfolio use and have it reflect my interests,
-          my mindset, and more.
+          my mindset, and more!
           <details>
             <summary>I am...</summary>
             <ul>
-              <li>An Aspiring Vegan ( <a href="#0">Why are you only aspiring? 🤔</a> )</li>
+              <li>An Aspiring Vegan ( <Link to="/veganism">Why aren't you one already? 🤔</Link> )</li>
               <li>An Asexual 🏳️‍🌈</li>
               <li>A Lover of the Arts</li>
               <li>An Animal Enthusiast</li>

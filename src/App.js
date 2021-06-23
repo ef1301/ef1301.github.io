@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,6 +18,7 @@ import { Header, Navbar, Footer } from "./components/functionalComponents";
 //const scrollToRef = (ref) => window.scrollTo(0, ref.current.offsetTop);
 
 function App() {
+  const [ready,setReady] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
   const [japtrans, setJap] = useState(false);
   const [menuOpen, setOpen] = useState(false);
@@ -35,13 +36,13 @@ function App() {
 
   const WorkingOnItComponent = () => <WorkingOnIt japtrans={japtrans} />;
 
-  /*const boxRef = useRef(null);
-    const collapse = () => setCollapse(boxOutsideClick);
-  const boxOutsideClick = OutsideClick(boxRef); 
-  console.log(boxOutsideClick);*/
+  useEffect(() => {
+    const handleReady = () => setReady(true);
+    handleReady();
+  }, []);
 
   return (
-    <div className="App" data-theme={darkMode ? "dark" : "light"} basename={process.env.PUBLIC_URL} >
+    <div className="App" style={{ visibility: ready ? 'visible' : 'hidden' }} data-theme={darkMode ? "dark" : "light"} basename={process.env.PUBLIC_URL} >
       <Router basename={process.env.PUBLIC_URL}>
         <Header
           japtrans={japtrans}
@@ -63,7 +64,7 @@ function App() {
             <Route exact path="/hobbies" component={Hobbies} />
             <Route exact path="/projects" component={Projects} />
             <Route exact path="/comingsoon" component={WorkingOnItComponent} />
-            <Route exact path="/contact" component={WorkingOnItComponent} />
+            <Route exact path="/veganism" component={WorkingOnItComponent} />
           </Switch>
         </div>
         <Footer 

@@ -116,7 +116,7 @@ nav {
   width: 100%;
   top: 0;
   left: 0;
-  background: var(--bg-color) url("../components/assets/nav.gif") no-repeat fixed left;
+  /*background: var(--bg-color) url("../components/assets/nav.gif") no-repeat fixed left;*/
   #links {
     position: fixed;
     top: 0;
@@ -153,11 +153,15 @@ nav {
     transition: all 0.25s ease-in-out;
     &:hover,
     &:focus {
-      background-image: linear-gradient(
+      text-shadow: -.2rem .2rem .5rem var(--link-color);
+      background: linear-gradient(-45deg, var(--emphasis-color), var(--accent-color), khaki);
+      background-size: 200% 200%;
+      animation: gradient 5s ease infinite;
+      /*background-image: linear-gradient(
         to right,
         var(--accent-color),
         var(--subaccent-color)
-      );
+      );*/
     }
   }
 

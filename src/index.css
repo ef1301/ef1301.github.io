@@ -44,6 +44,10 @@ body {
   padding: 0;
 }
 
+.fouc .page-layout * {
+  visibility: hidden;
+}
+
 .App {
   height: 100%;
   width: 100%;
